@@ -1,4 +1,4 @@
-package com.shoppi.smokingarea
+package com.hankim.smokingarea
 
 import android.content.Intent
 import android.os.Bundle

@@ -1,4 +1,4 @@
-package com.shoppi.smokingarea
+package com.hankim.smokingarea
 
 import android.os.Bundle
 import android.view.LayoutInflater

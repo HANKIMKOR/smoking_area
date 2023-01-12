@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.shoppi.smokingarea'
+    namespace 'com.hankim.smokingarea'
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.shoppi.smokingarea"
+        applicationId "com.hankim.smokingarea"
         minSdk 21
         targetSdk 32
         versionCode 1
@@ -43,4 +43,9 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+
+    // 네이버 지도 SDK
+    implementation("com.naver.maps:map-sdk:3.16.1")
+    // FusedLocationSource
+    implementation("com.google.android.gms:play-services-location:16.0.0")
 }

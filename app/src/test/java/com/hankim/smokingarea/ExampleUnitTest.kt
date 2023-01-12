@@ -1,4 +1,4 @@
-package com.shoppi.smokingarea
+package com.hankim.smokingarea
 
 import org.junit.Test
 
