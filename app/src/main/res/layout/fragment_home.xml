@@ -8,13 +8,29 @@
     <FrameLayout
         android:id="@+id/map"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent" />
 
-        <androidx.viewpager2.widget.ViewPager2
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
-    </FrameLayout>
+<!--    <androidx.viewpager2.widget.ViewPager2-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        android:layout_marginBottom="30dp"-->
+<!--        android:layout_width="280dp"-->
+<!--        android:layout_height="130dp"-->
+<!--        android:id="@+id/map_viewpager2"-->
+<!--        android:clipChildren="false"-->
+<!--        android:clipToPadding="false"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_marginTop="150dp"/>-->
 
-
+<!--    <LinearLayout-->
+<!--        android:layout_width="0dp"-->
+<!--        android:id="@+id/indicators"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:gravity="center"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/map_viewpager2"-->
+<!--        android:padding="15dp"-->
+<!--        android:layout_marginStart="20dp"/>-->
 </androidx.constraintlayout.widget.ConstraintLayout>

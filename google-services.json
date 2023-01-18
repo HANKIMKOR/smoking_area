@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "721055270947",
+    "firebase_url": "https://smokingarea-c5d0b-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "smokingarea-c5d0b",
+    "storage_bucket": "smokingarea-c5d0b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:721055270947:android:6581071ce5bfce6ad7c996",
+        "android_client_info": {
+          "package_name": "com.hankim.smokingarea"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "721055270947-3p9jigbi89lu9u1qvvoihvga2cj4l14d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCG3ZecPWKM7KDJuhEGJBwodNiOkeWTwVI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "721055270947-3p9jigbi89lu9u1qvvoihvga2cj4l14d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
