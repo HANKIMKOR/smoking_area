@@ -1,12 +1,13 @@
 package com.hankim.smokingarea
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 
-class MypageFragment: Fragment() {
+class MypageFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -14,4 +15,5 @@ class MypageFragment: Fragment() {
     ): View? {
         return inflater.inflate(R.layout.fragment_mypage, container, false)
     }
+
 }

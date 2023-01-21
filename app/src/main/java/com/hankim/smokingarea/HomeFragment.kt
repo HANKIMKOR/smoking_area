@@ -1,7 +1,6 @@
 package com.hankim.smokingarea
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -23,22 +22,22 @@ class HomeFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+//        super.onViewCreated(view, savedInstanceState)
 //
 //        locationSource =
 //            FusedLocationSource(this@HomeFragment, HomeFragment.LOCATION_PERMISSION_REQUEST_CODE)
 
         //json 사용부분
-        context?.assets?.open("area-list.json")?.use { inputStream ->
-            val size = inputStream.available()
-            val bytes = ByteArray(size)
-            inputStream.read(bytes)
-            val areaData = String(bytes)
-            Log.d("areaData", areaData)
-
-        }
-    }
+//        context?.assets?.open("area-list.json")?.use { inputStream ->
+//            val size = inputStream.available()
+//            val bytes = ByteArray(size)
+//            inputStream.read(bytes)
+//            val areaData = String(bytes)
+//            Log.d("areaData", areaData)
+//
+//        }
+//    }
 
 //
 //    override fun onRequestPermissionsResult(
