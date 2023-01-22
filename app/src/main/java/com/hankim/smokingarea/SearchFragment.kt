@@ -6,6 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.viewpager2.widget.ViewPager2
+import com.google.android.material.tabs.TabLayout
+import com.google.gson.Gson
 import org.json.JSONObject
 
 class SearchFragment : Fragment() {
@@ -20,36 +23,21 @@ class SearchFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val viewpager = view.findViewById<ViewPager2>(R.id.viewpager_search_banner)
+        val viewpagerIndicator =
+            view.findViewById<TabLayout>(R.id.viewpager_search_banner_indicator)
+
         val assetLoader = AssetLoader()
-        val areaData = assetLoader.getJsonString(requireContext(), "area_list.json")
+        val searchJsonString = assetLoader.getJsonString(requireContext(), "area_list.json")
 
-        if (!areaData.isNullOrEmpty()) {
-            val jsonObject = JSONObject(areaData)
-            val list = jsonObject.getJSONArray("list")
-            val firstList = list.getJSONObject(0)
+        if (!searchJsonString.isNullOrEmpty()) {
+            val gson = Gson()
+            val searchData = gson.fromJson(searchJsonString, SearchData::class.java )
+            searchData.list.local1
 
-            val local1 = firstList.getString("local1")
-            val local2 = firstList.getString("local2")
-            val place = firstList.getString("place")
-            val address = firstList.getString("address")
-            val sector = firstList.getString("sector")
-            val divide1 = firstList.getString("divide1")
-            val divide2 = firstList.getString("divide2")
-            val update = firstList.getString("update")
-
-            val smokingListValue = com.hankim.smokingarea.SmokingList(
-                local1,
-                local2,
-                place,
-                address,
-                sector,
-                divide1,
-                divide2,
-                update
-            )
-            smokingListValue.local1
-
-            Log.d("place_detail", smokingListValue.local2)
+            viewpager.adapter = SearchBannerAdapter().apply {
+                submitList()
+            }
 
         }
 
