@@ -23,7 +23,7 @@ class SearchBannerAdapter :
         holder.bind(getItem(position))
     }
 
-    class SearchBannerViewHolder(view: View) : RecyclerView.ViewHolder() {
+    class SearchBannerViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         private val bannerView = view.findViewById<View>(R.id.v_banner)
         private val bannerPlaceNameTextView = view.findViewById<TextView>(R.id.tv_place_name)
@@ -33,6 +33,8 @@ class SearchBannerAdapter :
 
 
         fun bind(banner: Banner) {
+            bannerPlaceNameTextView.text = banner.place
+            bannerPlaceAddressTextView.text = banner.address
 
 
         }

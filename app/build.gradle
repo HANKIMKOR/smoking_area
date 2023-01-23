@@ -65,5 +65,5 @@ dependencies {
     implementation("com.naver.maps:map-sdk:3.16.1")
 
     // FusedLocationSource
-    implementation("com.google.android.gms:play-services-location:16.0.0")
+    implementation("com.google.android.gms:play-services-location:+")
 }
