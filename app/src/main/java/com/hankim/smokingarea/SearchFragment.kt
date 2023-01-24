@@ -40,15 +40,15 @@ class SearchFragment : Fragment(), OnMapReadyCallback {
             view.findViewById<TabLayout>(R.id.viewpager_search_banner_indicator)
 
         val assetLoader = AssetLoader()
-        val searchJsonString = assetLoader.getJsonString(requireContext(), "area_list.json")
+        val searchJsonString = assetLoader.getJsonString(requireContext(), "smoking_list.json")
 
         if (!searchJsonString.isNullOrEmpty()) {
             val gson = Gson()
             val searchData = gson.fromJson(searchJsonString, SearchData::class.java)
-            searchData.list
+            searchData.smokingList
 
             viewpager.adapter = SearchBannerAdapter().apply {
-                submitList(searchData.list)
+                submitList(searchData.smokingList)
             }
         }
     }
@@ -67,12 +67,20 @@ class SearchFragment : Fragment(), OnMapReadyCallback {
 
         locationSource = FusedLocationSource(this@SearchFragment, LOCATION_PERMISSION_REQUEST_CODE)
         naverMap.locationSource = locationSource
+
     }
-    override fun onRequestPermissionsResult(requestCode: Int,
-                                            permissions: Array<String>,
-                                            grantResults: IntArray) {
-        if (locationSource.onRequestPermissionsResult(requestCode, permissions,
-                grantResults)) {
+
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<String>,
+        grantResults: IntArray
+    ) {
+        if (locationSource.onRequestPermissionsResult(
+                requestCode, permissions,
+                grantResults
+            )
+        ) {
             if (!locationSource.isActivated) { // 권한 거부됨
                 naverMap.locationTrackingMode = LocationTrackingMode.None
             }

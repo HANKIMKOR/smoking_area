@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 
 class SearchBannerAdapter :
-    ListAdapter<Banner, SearchBannerAdapter.SearchBannerViewHolder>(BannerDIffCallback()) {
+    ListAdapter<SmokingList, SearchBannerAdapter.SearchBannerViewHolder>(BannerDIffCallback()) {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SearchBannerViewHolder {
@@ -32,7 +32,7 @@ class SearchBannerAdapter :
 
 
 
-        fun bind(banner: Banner) {
+        fun bind(banner: SmokingList) {
             bannerPlaceNameTextView.text = banner.place
             bannerPlaceAddressTextView.text = banner.address
 
@@ -41,12 +41,12 @@ class SearchBannerAdapter :
     }
 }
 
-class BannerDIffCallback : DiffUtil.ItemCallback<Banner>() {
-    override fun areItemsTheSame(oldItem: Banner, newItem: Banner): Boolean {
+class BannerDIffCallback : DiffUtil.ItemCallback<SmokingList>() {
+    override fun areItemsTheSame(oldItem: SmokingList, newItem: SmokingList): Boolean {
         return oldItem.address == newItem.address
     }
 
-    override fun areContentsTheSame(oldItem: Banner, newItem: Banner): Boolean {
+    override fun areContentsTheSame(oldItem: SmokingList, newItem: SmokingList): Boolean {
         return oldItem == newItem
     }
 
