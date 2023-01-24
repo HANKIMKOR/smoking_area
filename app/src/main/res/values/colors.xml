@@ -11,4 +11,5 @@
     //kyul custom
 
     <color name="background_blue">#313381</color>
+    <color name="background_gray">#FCFCFC</color>
 </resources>

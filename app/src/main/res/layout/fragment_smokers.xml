@@ -1,30 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.naver.maps.map.MapView
-        android:id="@+id/mapView"
-        android:layout_width="match_parent"
-        android:layout_height="300dp" />
+
+    <ImageView
+        android:id="@+id/iv_smoking_marker"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_smoking_marker"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SearchView
+        android:id="@+id/searchBar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_smoking_marker"
+        app:layout_constraintCircleRadius="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_smoking_marker"
+        app:layout_constraintTop_toTopOf="@id/iv_smoking_marker" />
 
     <View
-        android:id="@+id/lineView"
-        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/v_filter_bar"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/background_gray"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="#cccccc"
-        android:layout_width="0dp"
-        android:layout_height="1dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_smoking_marker" />
+
+    <ImageView
+        android:id="@+id/iv_filter"
+        android:layout_width="36dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/ic_filter"
+        app:layout_constraintBottom_toBottomOf="@id/v_filter_bar"
+        app:layout_constraintStart_toStartOf="@id/v_filter_bar"
+        app:layout_constraintTop_toTopOf="@id/v_filter_bar" />
+
+    <TextView
+        android:id="@+id/tv_filter1"
+        android:layout_width="64dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/button_radius_background_white"
+        android:gravity="center"
+        android:text="가까운 순"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/v_filter_bar"
+        app:layout_constraintStart_toEndOf="@id/iv_filter"
+        app:layout_constraintTop_toTopOf="@id/v_filter_bar" />
+
+    <TextView
+        android:id="@+id/iv_filter2"
+        android:layout_width="82dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/button_radius_background_white"
+        android:gravity="center"
+        android:text="평점 높은 순"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/tv_filter1"
+        app:layout_constraintStart_toEndOf="@id/tv_filter1"
+        app:layout_constraintTop_toTopOf="@id/tv_filter1" />
+
+    <TextView
+        android:id="@+id/iv_filter3"
+        android:layout_width="54dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/button_radius_background_white"
+        android:gravity="center"
+        android:text="추천 순"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/iv_filter2"
+        app:layout_constraintStart_toEndOf="@id/iv_filter2"
+        app:layout_constraintTop_toTopOf="@id/iv_filter2" />
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/v_filter_bar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/lineView" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
