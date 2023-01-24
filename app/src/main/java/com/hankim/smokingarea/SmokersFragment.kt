@@ -6,13 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.viewpager2.widget.ViewPager2
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.hankim.smokingarea.network.ApiClient
 import com.naver.maps.geometry.LatLng
-import com.naver.maps.map.LocationTrackingMode
-import com.naver.maps.map.MapView
-import com.naver.maps.map.NaverMap
-import com.naver.maps.map.OnMapReadyCallback
+import com.naver.maps.map.*
 import com.naver.maps.map.overlay.Marker
 import com.naver.maps.map.overlay.OverlayImage
 import com.naver.maps.map.util.FusedLocationSource
@@ -23,49 +21,40 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class HomeFragment : Fragment(), OnMapReadyCallback {
-    private lateinit var mapView: MapView
-    private lateinit var locationSource: FusedLocationSource
+class SmokersFragment : Fragment(), OnMapReadyCallback {
     private lateinit var naverMap: NaverMap
+    private lateinit var locationSource: FusedLocationSource
+    private lateinit var mapView: MapView
 
-    private lateinit var viewPager: ViewPager2
-    private var viewPagerAdapter = HomeBannerAdapter()
+    private lateinit var recyclerView: RecyclerView
+    private var recyclerAdapter = SmokersListAdapter()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val rootView = inflater.inflate(R.layout.fragment_home, container, false)
+        val rootView = inflater.inflate(R.layout.fragment_smokers, container, false)
 
         mapView = rootView.findViewById(R.id.mapView) as MapView
         mapView.onCreate(savedInstanceState)
         mapView.getMapAsync(this)
 
-        viewPager = rootView.findViewById(R.id.homeViewPager) as ViewPager2
-        viewPager.adapter = viewPagerAdapter
+
+
+        recyclerView = rootView.findViewById(R.id.recyclerView)
+        recyclerView.adapter = recyclerAdapter
+        recyclerView.layoutManager = LinearLayoutManager(context)
 
         return rootView
     }
 
     override fun onMapReady(map: NaverMap) {
         naverMap = map
-
-        naverMap.maxZoom = 18.0
-        naverMap.minZoom = 10.0
-
-        val uiSetting = naverMap.uiSettings
-        uiSetting.isLocationButtonEnabled = true
-
-        locationSource = FusedLocationSource(
-            this@HomeFragment,
-            HomeFragment.LOCATION_PERMISSION_REQUEST_CODE
-        )
+        locationSource = FusedLocationSource(this@SmokersFragment, LOCATION_PERMISSION_REQUEST_CODE)
         naverMap.locationSource = locationSource
 
-
         getSmokingListFromAPI()
-
     }
 
     private fun getSmokingListFromAPI() {
@@ -87,7 +76,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
 
                         response.body()?.let {data ->
                             updateMarker(data.smokingList)
-                            viewPagerAdapter.submitList(data.smokingList)
+                            recyclerAdapter.submitList(data.smokingList)
                         }
                     }
 
@@ -111,6 +100,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
         }
     }
 
+
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<String>,
@@ -128,6 +118,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
         }
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
     }
+
 
     override fun onStart() {
         super.onStart()
@@ -167,8 +158,4 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
     companion object {
         private const val LOCATION_PERMISSION_REQUEST_CODE = 1000
     }
-
-
 }
-
-

@@ -10,8 +10,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <include layout="@layout/fragment_home_bottom_sheet" />
-
-
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/homeViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="120dp"
+        android:orientation="horizontal" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

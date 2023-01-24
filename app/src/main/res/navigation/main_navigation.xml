@@ -14,9 +14,9 @@
 
     <fragment
         android:id="@+id/searchFragment"
-        android:name="com.hankim.smokingarea.SearchFragment"
+        android:name="com.hankim.smokingarea.SmokersFragment"
         android:label="SearchFragment"
-        tools:layout="@layout/fragment_search" />
+        tools:layout="@layout/fragment_smokers" />
 
     <fragment
         android:id="@+id/mypageFragment"
