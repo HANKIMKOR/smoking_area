@@ -1,4 +1,4 @@
-package com.hankim.smokingarea
+package com.hankim.smokingarea.home
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,10 +7,12 @@ import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.hankim.smokingarea.R
+import com.hankim.smokingarea.SmokingList
 
 
-class SmokersListAdapter :
-    ListAdapter<SmokingList, SmokersListAdapter.HomeBannerViewHolder>(differ) {
+class HomeBannerAdapter :
+    ListAdapter<SmokingList, HomeBannerAdapter.HomeBannerViewHolder>(differ) {
 
     inner class HomeBannerViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
         fun bind(smokingList: SmokingList) {
@@ -25,7 +27,7 @@ class SmokersListAdapter :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeBannerViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        return HomeBannerViewHolder(inflater.inflate(R.layout.item_smokers_list, parent, false))
+        return HomeBannerViewHolder(inflater.inflate(R.layout.item_home_banner, parent, false))
     }
 
     override fun onBindViewHolder(holder: HomeBannerViewHolder, position: Int) {

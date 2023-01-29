@@ -1,33 +1,40 @@
-package com.hankim.smokingarea
+package com.hankim.smokingarea.home
 
-import android.graphics.Color
+import android.Manifest.permission.ACCESS_FINE_LOCATION
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
+import com.hankim.smokingarea.R
+import com.hankim.smokingarea.SearchData
+import com.hankim.smokingarea.SmokingList
 import com.hankim.smokingarea.network.ApiClient
 import com.naver.maps.geometry.LatLng
-import com.naver.maps.map.LocationTrackingMode
-import com.naver.maps.map.MapView
-import com.naver.maps.map.NaverMap
-import com.naver.maps.map.OnMapReadyCallback
+import com.naver.maps.map.*
 import com.naver.maps.map.overlay.Marker
+import com.naver.maps.map.overlay.Overlay
 import com.naver.maps.map.overlay.OverlayImage
 import com.naver.maps.map.util.FusedLocationSource
-import com.naver.maps.map.util.MarkerIcons
+import com.naver.maps.map.widget.LocationButtonView
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class HomeFragment : Fragment(), OnMapReadyCallback {
+
+class HomeFragment : Fragment(), OnMapReadyCallback, Overlay.OnClickListener {
     private lateinit var mapView: MapView
     private lateinit var locationSource: FusedLocationSource
     private lateinit var naverMap: NaverMap
 
+    private lateinit var currentLocationButton: LocationButtonView
+
+
+    // Viewpager2
     private lateinit var viewPager: ViewPager2
     private var viewPagerAdapter = HomeBannerAdapter()
 
@@ -38,29 +45,85 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
     ): View? {
         val rootView = inflater.inflate(R.layout.fragment_home, container, false)
 
+
+        // 맵뷰 구성
         mapView = rootView.findViewById(R.id.mapView) as MapView
         mapView.onCreate(savedInstanceState)
         mapView.getMapAsync(this)
+        currentLocationButton = rootView.findViewById(R.id.bt_CurrentLocation)
 
+        // 뷰페이저 구성
         viewPager = rootView.findViewById(R.id.homeViewPager) as ViewPager2
         viewPager.adapter = viewPagerAdapter
+
+        // 뷰페이저 클릭 시 마커 이동 구현
+        viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(position: Int) {
+                super.onPageSelected(position)
+
+                val selectedSmokingList = viewPagerAdapter.currentList[position]
+                val cameraUpdate =
+                    CameraUpdate.scrollTo(LatLng(selectedSmokingList.lat, selectedSmokingList.lng))
+                        .animate(CameraAnimation.Easing)
+
+                naverMap.moveCamera(cameraUpdate)
+            }
+
+        })
+
 
         return rootView
     }
 
+    private val requestPermissionLauncher = registerForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ) { isGranted ->
+        if (isGranted) {
+            naverMap.locationTrackingMode = LocationTrackingMode.Face
+
+        } else {
+            naverMap.locationTrackingMode = LocationTrackingMode.None
+        }
+    }
+
+//    override fun onRequestPermissionsResult(
+//        requestCode: Int,
+//        permissions: Array<String>,
+//        grantResults: IntArray
+//    ) {
+//        if (locationSource.onRequestPermissionsResult(
+//                requestCode, permissions,
+//                grantResults
+//            )
+//        ) {
+//            if (!locationSource.isActivated) { // 권한 거부됨
+//                naverMap.locationTrackingMode = LocationTrackingMode.None
+//            }
+//            return
+//        }
+//        super.request(requestCode, permissions, grantResults)
+//    }
+
     override fun onMapReady(map: NaverMap) {
+
+        requestPermissionLauncher.launch(ACCESS_FINE_LOCATION)
+
         naverMap = map
 
         naverMap.maxZoom = 18.0
         naverMap.minZoom = 10.0
 
         val uiSetting = naverMap.uiSettings
-        uiSetting.isLocationButtonEnabled = true
+        uiSetting.isLocationButtonEnabled = false
+
+        currentLocationButton.map = naverMap
+
+        // 위치 추적
 
         locationSource = FusedLocationSource(
-            this@HomeFragment,
-            HomeFragment.LOCATION_PERMISSION_REQUEST_CODE
-        )
+            this@HomeFragment, LOCATION_PERMISSION_REQUEST_CODE
+                    )
+
         naverMap.locationSource = locationSource
 
 
@@ -76,7 +139,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
 
         retrofit.create(ApiClient::class.java).also {
             it.getSmokingList()
-                .enqueue(object : Callback<SearchData>{
+                .enqueue(object : Callback<SearchData> {
                     override fun onResponse(
                         call: Call<SearchData>,
                         response: Response<SearchData>
@@ -85,7 +148,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
                             return
                         }
 
-                        response.body()?.let {data ->
+                        response.body()?.let { data ->
                             updateMarker(data.smokingList)
                             viewPagerAdapter.submitList(data.smokingList)
                         }
@@ -100,33 +163,15 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
     }
 
     private fun updateMarker(dataLists: List<SmokingList>) {
-        dataLists.forEach {dataList ->
+        dataLists.forEach { dataList ->
             val marker = Marker()
             marker.position = LatLng(dataList.lat, dataList.lng)
-            // todo 마커 클릭 리스터
+            marker.onClickListener = this
             marker.map = naverMap
             marker.tag = dataList.id
             marker.icon = OverlayImage.fromResource(R.drawable.ic_smoking_marker)
 
         }
-    }
-
-    override fun onRequestPermissionsResult(
-        requestCode: Int,
-        permissions: Array<String>,
-        grantResults: IntArray
-    ) {
-        if (locationSource.onRequestPermissionsResult(
-                requestCode, permissions,
-                grantResults
-            )
-        ) {
-            if (!locationSource.isActivated) { // 권한 거부됨
-                naverMap.locationTrackingMode = LocationTrackingMode.None
-            }
-            return
-        }
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
     }
 
     override fun onStart() {
@@ -166,6 +211,21 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
 
     companion object {
         private const val LOCATION_PERMISSION_REQUEST_CODE = 1000
+    }
+
+    override fun onClick(overlay: Overlay): Boolean {
+        overlay.tag
+
+        val selectedModel = viewPagerAdapter.currentList.firstOrNull {
+            it.id == overlay.tag
+        }
+
+        selectedModel?.let {
+            val position = viewPagerAdapter.currentList.indexOf(it)
+            viewPager.currentItem = position
+        }
+
+        return true
     }
 
 

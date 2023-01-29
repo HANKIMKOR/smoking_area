@@ -1,4 +1,4 @@
-package com.hankim.smokingarea
+package com.hankim.smokingarea.smokers
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.hankim.smokingarea.R
+import com.hankim.smokingarea.SearchData
 import com.hankim.smokingarea.network.ApiClient
 import retrofit2.Call
 import retrofit2.Callback
