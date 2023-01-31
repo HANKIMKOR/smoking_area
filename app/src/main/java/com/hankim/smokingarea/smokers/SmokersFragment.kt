@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.hankim.smokingarea.R
 import com.hankim.smokingarea.SearchData
+import com.hankim.smokingarea.databinding.FragmentSmokersBinding
 import com.hankim.smokingarea.network.ApiClient
 import retrofit2.Call
 import retrofit2.Callback
@@ -20,19 +21,22 @@ class SmokersFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
     private var recyclerAdapter = SmokersListAdapter()
+    private var _binding: FragmentSmokersBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val rootView = inflater.inflate(R.layout.fragment_smokers, container, false)
+        _binding = FragmentSmokersBinding.inflate(inflater, container, false)
+        val rootView = binding
 
-        recyclerView = rootView.findViewById(R.id.recyclerView)
+        recyclerView = rootView.recyclerView
         recyclerView.adapter = recyclerAdapter
         recyclerView.layoutManager = LinearLayoutManager(context)
 
-        return rootView
+        return rootView.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

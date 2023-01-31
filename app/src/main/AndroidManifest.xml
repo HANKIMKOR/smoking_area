@@ -39,6 +39,8 @@
             android:name=".MainActivity"
             android:exported="false" />
 
+        <activity android:name=".home.AddSmokersActivity" />
+
     </application>
 
 </manifest>

@@ -13,7 +13,7 @@ class MypageFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_smokers_detail, container, false)
+        return inflater.inflate(R.layout.activity_add_smokers, container, false)
     }
 
 }

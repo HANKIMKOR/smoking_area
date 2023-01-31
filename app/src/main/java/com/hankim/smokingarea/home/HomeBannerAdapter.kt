@@ -11,7 +11,7 @@ import com.hankim.smokingarea.R
 import com.hankim.smokingarea.SmokingList
 
 
-class HomeBannerAdapter :
+class HomeBannerAdapter:
     ListAdapter<SmokingList, HomeBannerAdapter.HomeBannerViewHolder>(differ) {
 
     inner class HomeBannerViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
