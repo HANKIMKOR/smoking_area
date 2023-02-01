@@ -1,5 +1,6 @@
 package com.hankim.smokingarea.smokers
 
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,9 +13,12 @@ import com.hankim.smokingarea.SmokingList
 
 
 class SmokersListAdapter :
-    ListAdapter<SmokingList, SmokersListAdapter.HomeBannerViewHolder>(differ) {
+    ListAdapter<SmokingList, SmokersListAdapter.SmokersListViewHolder>(differ) {
 
-    inner class HomeBannerViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
+    inner class SmokersListViewHolder(
+        private val view: View
+    ) : RecyclerView.ViewHolder(view) {
+
         fun bind(smokingList: SmokingList) {
             val bannerPlaceNameTextView = view.findViewById<TextView>(R.id.tv_place_name)
             val bannerPlaceAddressTextView =
@@ -22,17 +26,21 @@ class SmokersListAdapter :
 
             bannerPlaceNameTextView.text = smokingList.place
             bannerPlaceAddressTextView.text = smokingList.address
+
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeBannerViewHolder {
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SmokersListViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        return HomeBannerViewHolder(inflater.inflate(R.layout.item_smokers_list, parent, false))
+        return SmokersListViewHolder(inflater.inflate(R.layout.item_smokers_list, parent, false))
+
     }
 
-    override fun onBindViewHolder(holder: HomeBannerViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: SmokersListViewHolder, position: Int) {
         holder.bind(currentList[position])
     }
+
 
     companion object {
         val differ = object : DiffUtil.ItemCallback<SmokingList>() {
@@ -40,11 +48,15 @@ class SmokersListAdapter :
                 return oldItem.id == newItem.id
             }
 
-            override fun areContentsTheSame(oldItem: SmokingList, newItem: SmokingList): Boolean {
+            override fun areContentsTheSame(
+                oldItem: SmokingList,
+                newItem: SmokingList
+            ): Boolean {
                 return oldItem == newItem
             }
         }
     }
+
 }
 
 

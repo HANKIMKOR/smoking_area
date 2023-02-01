@@ -1,5 +1,9 @@
 package com.hankim.smokingarea
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
 data class SmokingList(
     val id: Int,
     val place: String,
@@ -12,4 +16,4 @@ data class SmokingList(
     val divide1: String,
     val divide2: String,
     val update: String,
-)
+) : Parcelable

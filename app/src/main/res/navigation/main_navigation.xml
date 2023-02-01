@@ -20,7 +20,7 @@
 
     <fragment
         android:id="@+id/mypageFragment"
-        android:name="com.hankim.smokingarea.mypage.MypageFragment"
+        android:name="com.hankim.smokingarea.mypage.MyPageFragment"
         android:label="MypageFragment"
         tools:layout="@layout/fragment_mypage" />
 
