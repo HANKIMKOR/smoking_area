@@ -1,5 +1,6 @@
 package com.hankim.smokingarea
 
+import android.Manifest
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,6 +11,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +25,7 @@ class MainActivity : AppCompatActivity() {
             bottomNavigationView.setupWithNavController(navController)
         }
     }
+
 }
 
 
