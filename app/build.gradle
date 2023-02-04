@@ -4,7 +4,6 @@ plugins {
     id 'com.google.gms.google-services'
     id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'// json
     id 'kotlin-android'
-    id 'kotlin-android-extensions'
 }
 
 android {
@@ -39,9 +38,6 @@ android {
         enabled = true
     }
 
-    androidExtensions {
-        experimental true
-    }
 }
 
 dependencies {
@@ -54,6 +50,7 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
     implementation 'androidx.viewpager2:viewpager2:1.0.0'
     implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    implementation 'com.google.firebase:firebase-firestore-ktx:24.4.2'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
@@ -76,6 +73,13 @@ dependencies {
 
     // 네이버 지도 SDK
     implementation "com.naver.maps:map-sdk:3.16.1"
+
+    // 네이버 login
+    dependencies {
+        implementation files('libs/oauth-5.4.0.aar')
+    }
+    implementation 'com.naver.nid:naveridlogin-android-sdk:4.2.6'
+    implementation 'com.airbnb.android:lottie:3.1.0'
 
     // FusedLocationSource
     implementation "com.google.android.gms:play-services-location:20.0.0"

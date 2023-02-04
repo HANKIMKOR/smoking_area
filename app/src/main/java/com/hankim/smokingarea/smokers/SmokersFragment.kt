@@ -1,22 +1,13 @@
 package com.hankim.smokingarea.smokers
 
-import android.Manifest
-import android.app.LauncherActivity.ListItem
-import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ListAdapter
-import android.widget.Toast
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.hankim.smokingarea.R
 import com.hankim.smokingarea.SearchData
-import com.hankim.smokingarea.SmokingList
 import com.hankim.smokingarea.databinding.FragmentSmokersBinding
 import com.hankim.smokingarea.network.ApiClient
 import retrofit2.Call

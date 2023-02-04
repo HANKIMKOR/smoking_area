@@ -28,7 +28,6 @@ import com.naver.maps.map.overlay.Overlay
 import com.naver.maps.map.overlay.OverlayImage
 import com.naver.maps.map.util.FusedLocationSource
 import com.naver.maps.map.widget.LocationButtonView
-import kotlinx.android.synthetic.main.fragment_home.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -112,14 +111,14 @@ class HomeFragment : Fragment(), OnMapReadyCallback, Overlay.OnClickListener {
         }
     }
 
-    override fun registerForContextMenu(view: View) {
-        if (!locationSource.isActivated) { // 권한 거부됨
-            naverMap.locationTrackingMode = LocationTrackingMode.None
-        }
-        return
-
-        super.registerForContextMenu(view)
-    }
+//    override fun registerForContextMenu(view: View) {
+//        if (!locationSource.isActivated) { // 권한 거부됨
+//            naverMap.locationTrackingMode = LocationTrackingMode.None
+//        }
+//        return
+//
+//        super.registerForContextMenu(view)
+//    }
 
     override fun onMapReady(map: NaverMap) {
         this.naverMap = map

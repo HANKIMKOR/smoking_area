@@ -15,10 +15,5 @@ class SmokersDetailActivity: AppCompatActivity() {
         binding = ActivitySmokersDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val data = intent.getParcelableExtra<SmokingList>("data")
-
-        binding.tvSmokersPlaceName.text = data!!.place
-        binding.tvSmokersPlaceAddress.text = data!!.address
-
     }
 }

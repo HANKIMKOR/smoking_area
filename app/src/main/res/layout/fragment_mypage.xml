@@ -56,4 +56,24 @@
         app:layout_constraintEnd_toEndOf="@id/passwordEditText"
         app:layout_constraintTop_toBottomOf="@id/passwordEditText" />
 
+    <Button
+        android:id="@+id/naverLoginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/signInOutButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="id, token: "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/naverLoginButton"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
