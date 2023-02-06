@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_smokers"
+    android:padding="24dp">
+
+
+    <ImageView
+        android:id="@+id/iv_smoking_marker"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/ic_smoking_marker"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_smokers_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="30dp"
+        android:text="Smokers 가입하기"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/iv_smoking_marker"
+        app:layout_constraintStart_toEndOf="@id/iv_smoking_marker"
+        app:layout_constraintTop_toTopOf="@id/iv_smoking_marker" />
+
+    <TextView
+        android:id="@+id/tv_smokers_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="학연 / 지연 / 혈연 그리고 흡연"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_smokers_title" />
+
+    <Button
+        android:id="@+id/kakaoLoginButton"
+        android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/kakao_container"
+        android:drawableLeft="@drawable/kakao_symbol"
+        android:text="카카오로 시작하기"
+        android:textColor="@color/kakao_label"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintCircleRadius="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_smokers_subtitle" />
+
+
+    <Button
+        android:id="@+id/naverLoginButton"
+        android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:backgroundTint="@color/naver_container"
+        android:drawableLeft="@drawable/naver_symbol"
+        android:text="네이버로 시작하기"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintCircleRadius="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/kakaoLoginButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:gravity="center"
+        android:text="계속하면 당사의 서비스 약관에 동의하고, 개인정보 처리방침을 읽어 당사의 데이터 수집, 사용을 확인했음을 인정하는 것입니다."
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/tv_smokers_title"
+        app:layout_constraintStart_toStartOf="@id/iv_smoking_marker" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,15 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:theme="@style/Theme.SmokingArea.Splash"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/background_smokers"
+    android:padding="24dp">
 
-    <ImageView
-        android:layout_width="240dp"
-        android:layout_height="300dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        android:id="@+id/tv_smokers_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="S.m.o.k.e.r.s"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:layout_marginTop="80dp"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/background_splash_image" />
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

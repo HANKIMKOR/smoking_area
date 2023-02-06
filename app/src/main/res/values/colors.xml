@@ -14,4 +14,12 @@
     <color name="background_gray">#FCFCFC</color>
     <color name="background_gray_bold">#7E7E7E</color>
     <color name="orange">#F27F35</color>
+
+    // kakao
+    <color name="kakao_container">#FEE500</color>
+    <color name="kakao_symbol">#000000</color>
+    <color name="kakao_label">#191919</color>
+
+    // naver
+    <color name="naver_container">#03C75A</color>
 </resources>

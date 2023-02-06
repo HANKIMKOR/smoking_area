@@ -5,9 +5,10 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
-    
+
 
     <application
+        android:name=".InitApp"
         android:allowBackup="false"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -20,8 +21,9 @@
 
         <meta-data
             android:name="com.naver.maps.map.CLIENT_ID"
-            android:value="sy28c8twaz" />
+            android:value="@string/naver_maps_client_id" />
 
+        <!--        First Viewer-->
         <activity
             android:name=".SplashActivity"
             android:exported="true"
@@ -36,12 +38,29 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <!--        Second Viewer-->
+        <activity android:name=".LoginActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
 
         <activity android:name=".home.AddSmokersActivity" />
 
+        <activity
+            android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="oauth"
+                    android:scheme="@string/kakao_redirection_scheme" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

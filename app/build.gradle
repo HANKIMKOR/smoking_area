@@ -74,12 +74,13 @@ dependencies {
     // 네이버 지도 SDK
     implementation "com.naver.maps:map-sdk:3.16.1"
 
-    // 네이버 login
-    dependencies {
-        implementation files('libs/oauth-5.4.0.aar')
-    }
-    implementation 'com.naver.nid:naveridlogin-android-sdk:4.2.6'
-    implementation 'com.airbnb.android:lottie:3.1.0'
+//    // 네이버 login
+//    implementation files('libs/oauth-5.4.0.aar')
+//    implementation 'com.naver.nid:naveridlogin-android-sdk:4.2.6'
+//    implementation 'com.airbnb.android:lottie:3.1.0'
+
+    // kakao login
+    implementation "com.kakao.sdk:v2-user:2.12.1"
 
     // FusedLocationSource
     implementation "com.google.android.gms:play-services-location:20.0.0"
