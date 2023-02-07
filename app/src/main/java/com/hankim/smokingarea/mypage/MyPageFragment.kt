@@ -1,20 +1,39 @@
 package com.hankim.smokingarea.mypage
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewDebug.FlagToString
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.hankim.smokingarea.R
+import com.hankim.smokingarea.databinding.FragmentMypageBinding
+import com.hankim.smokingarea.databinding.FragmentSettingBinding
 
 class MyPageFragment : Fragment() {
 
+    lateinit var settingButton: FloatingActionButton
+    lateinit var binding: FragmentMypageBinding
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_mypage, container, false)
+        binding = FragmentMypageBinding.inflate(inflater, container, false)
+        return binding.root
+
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        settingButton = binding.btSettingMypage
+        settingButton.setOnClickListener {
+            findNavController().navigate(R.id.action_mypageFragment_to_settingFragment)
+        }
     }
 
 //

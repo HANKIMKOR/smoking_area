@@ -39,7 +39,9 @@
                 android:value="" />
         </activity>
         <!--        Second Viewer-->
-        <activity android:name=".LoginActivity" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />

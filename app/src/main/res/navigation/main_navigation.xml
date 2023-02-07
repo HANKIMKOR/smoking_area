@@ -22,6 +22,14 @@
         android:id="@+id/mypageFragment"
         android:name="com.hankim.smokingarea.mypage.MyPageFragment"
         android:label="MypageFragment"
-        tools:layout="@layout/fragment_mypage" />
+        tools:layout="@layout/fragment_mypage" >
+        <action
+            android:id="@+id/action_mypageFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.hankim.smokingarea.mypage.SettingFragment"
+        android:label="SettingFragment" />
 
 </navigation>

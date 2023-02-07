@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.SmokingArea" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimary">@color/background_blue</item>
         <item name="colorPrimaryVariant">@color/background_blue</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
@@ -17,5 +17,9 @@
     <style name="Theme.SmokingArea.Splash" parent="Theme.SmokingArea">
         <!-- Status Bar Translucent. -->
         <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="AppbarStyle" parent="Widget.Design.AppBarLayout">
+        <item name="android:background">@color/white</item>
     </style>
 </resources>
