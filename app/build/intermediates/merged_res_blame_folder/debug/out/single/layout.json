@@ -1,0 +1,54 @@
+[
+    {
+        "merged": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-mergeDebugResources-57:/layout/activity_add_smokers.xml",
+        "source": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-main-60:/layout/activity_add_smokers.xml"
+    },
+    {
+        "merged": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-mergeDebugResources-57:/layout/activity_smokers_detail.xml",
+        "source": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-main-60:/layout/activity_smokers_detail.xml"
+    },
+    {
+        "merged": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-mergeDebugResources-57:/layout/activity_main.xml",
+        "source": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-main-60:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-mergeDebugResources-57:/layout/recycler_list.xml",
+        "source": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-main-60:/layout/recycler_list.xml"
+    },
+    {
+        "merged": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-mergeDebugResources-57:/layout/fragment_home.xml",
+        "source": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-main-60:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.hankim.smokingarea.app-mergeDebugResources-57:/layout/fragment_setting.xml",
+        "source": "com.hankim.smokingarea.app-main-60:/layout/fragment_setting.xml"
+    },
+    {
+        "merged": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-mergeDebugResources-57:/layout/fragment_setting.xml",
+        "source": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-main-60:/layout/fragment_setting.xml"
+    },
+    {
+        "merged": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-mergeDebugResources-57:/layout/item_smokers_list.xml",
+        "source": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-main-60:/layout/item_smokers_list.xml"
+    },
+    {
+        "merged": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-mergeDebugResources-57:/layout/activity_login.xml",
+        "source": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-main-60:/layout/activity_login.xml"
+    },
+    {
+        "merged": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-mergeDebugResources-57:/layout/item_home_banner.xml",
+        "source": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-main-60:/layout/item_home_banner.xml"
+    },
+    {
+        "merged": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-mergeDebugResources-57:/layout/activity_splash.xml",
+        "source": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-main-60:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-mergeDebugResources-57:/layout/fragment_smokers.xml",
+        "source": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-main-60:/layout/fragment_smokers.xml"
+    },
+    {
+        "merged": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-mergeDebugResources-57:/layout/fragment_mypage.xml",
+        "source": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-main-60:/layout/fragment_mypage.xml"
+    }
+]

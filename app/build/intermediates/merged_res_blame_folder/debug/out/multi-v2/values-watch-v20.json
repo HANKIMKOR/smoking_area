@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.hankim.smokingarea.app-mergeDebugResources-56:/values-watch-v20/values-watch-v20.xml",
+            "map": [
+                {
+                    "source": "/Users/RATIA/.gradle/caches/transforms-3/949e326c0185da1ad3f7b7c06684a314/transformed/appcompat-1.5.1/res/values-watch-v20/values-watch-v20.xml",
+                    "from": {
+                        "startLines": "2,5,8",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,214,385",
+                        "endLines": "4,7,10",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "209,380,553"
+                    }
+                }
+            ]
+        }
+    ]
+}
