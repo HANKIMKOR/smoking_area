@@ -1,18 +1,14 @@
-package com.hankim.smokingarea.home
+package com.hankim.smokingarea.ui
 
-import android.Manifest
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.activity.result.contract.ActivityResultContracts.*
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.viewmodel.viewModelFactory
 import androidx.viewpager2.widget.ViewPager2
-import com.google.android.material.snackbar.Snackbar
-import com.google.android.material.tabs.TabLayoutMediator
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -20,6 +16,7 @@ import com.hankim.smokingarea.R
 import com.hankim.smokingarea.SearchData
 import com.hankim.smokingarea.SmokingList
 import com.hankim.smokingarea.databinding.FragmentHomeBinding
+import com.hankim.smokingarea.home.AddSmokersActivity
 import com.hankim.smokingarea.network.ApiClient
 import com.naver.maps.geometry.LatLng
 import com.naver.maps.map.*
@@ -36,6 +33,11 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 
 class HomeFragment : Fragment(), OnMapReadyCallback, Overlay.OnClickListener {
+
+    private val viewModel: HomeViewModel by viewModels { viewModelFactory { requireContext() }}
+    private lateinit var binding: FragmentHomeBinding
+
+    // NaverMap
     private lateinit var mapView: MapView
     private lateinit var naverMap: NaverMap
     private lateinit var locationSource: FusedLocationSource
@@ -45,30 +47,26 @@ class HomeFragment : Fragment(), OnMapReadyCallback, Overlay.OnClickListener {
     private lateinit var viewPager: ViewPager2
     private var viewPagerAdapter = HomeBannerAdapter()
 
-    private var _binding: FragmentHomeBinding? = null
-    private val binding get() = _binding!!
 
     //Firebase
     private val auth: FirebaseAuth by lazy {
         Firebase.auth
     }
 
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val rootView = binding
+        binding = FragmentHomeBinding.inflate(inflater, container, false)
 
         // 맵뷰 구성
-        mapView = rootView.mapView
+        mapView = binding.mapView
         mapView.onCreate(savedInstanceState)
         mapView.getMapAsync(this)
 
         // 뷰페이저 구성
-        viewPager = rootView.homeViewPager
+        viewPager = binding.homeViewPager
         viewPager.adapter = viewPagerAdapter
 
         // 뷰페이저 클릭 시 마커 이동 구현
@@ -83,42 +81,22 @@ class HomeFragment : Fragment(), OnMapReadyCallback, Overlay.OnClickListener {
 
                 naverMap.moveCamera(cameraUpdate)
             }
-
         })
 
-        return rootView.root
+        return binding.root
     }
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val fragmentHomeBinding = FragmentHomeBinding.bind(view)
-        _binding = fragmentHomeBinding
+        binding.lifecycleOwner = viewLifecycleOwner
 
-        currentLocationButton = fragmentHomeBinding.btCurrentLocation
+        // NaverMap 위치 설정
+        currentLocationButton = binding.btCurrentLocation
         locationSource = FusedLocationSource(this, LOCATION_PERMISSION_REQUEST_CODE)
 
-        fragmentHomeBinding.addFloatingButton.setOnClickListener {
-            context?.let {
-//                if (auth.currentUser != null) {
-                val intent = Intent(requireContext(), AddSmokersActivity::class.java)
-                startActivity(intent)
-//                } else {
-//                    Snackbar.make(view, "로그인 후 사용해주세요", Snackbar.LENGTH_LONG).show()
-//                }
-            }
-        }
+        setFloatingButtonClickEvent()
     }
-
-//    override fun registerForContextMenu(view: View) {
-//        if (!locationSource.isActivated) { // 권한 거부됨
-//            naverMap.locationTrackingMode = LocationTrackingMode.None
-//        }
-//        return
-//
-//        super.registerForContextMenu(view)
-//    }
 
     override fun onMapReady(map: NaverMap) {
         this.naverMap = map
@@ -141,7 +119,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback, Overlay.OnClickListener {
 
     private fun getSmokingListFromAPI() {
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://smokingarea-c5d0b-default-rtdb.asia-southeast1.firebasedatabase.app")
+            .baseUrl(getString(R.string.firebase_url))
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
@@ -192,6 +170,19 @@ class HomeFragment : Fragment(), OnMapReadyCallback, Overlay.OnClickListener {
             marker.tag = dataList.id
             marker.icon = OverlayImage.fromResource(R.drawable.ic_smoking_marker)
 
+        }
+    }
+
+    private fun setFloatingButtonClickEvent() {
+        binding.addFloatingButton.setOnClickListener {
+            context?.let {
+                //                if (auth.currentUser != null) {
+                val intent = Intent(requireContext(), AddSmokersActivity::class.java)
+                startActivity(intent)
+                //                } else {
+                //                    Snackbar.make(view, "로그인 후 사용해주세요", Snackbar.LENGTH_LONG).show()
+                //                }
+            }
         }
     }
 

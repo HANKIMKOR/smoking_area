@@ -14,4 +14,4 @@ data class SmokingList(
     val divide1: String,
     val divide2: String,
     val update: String,
-)
+): java.io.Serializable

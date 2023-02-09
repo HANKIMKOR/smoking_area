@@ -2851,6 +2851,7 @@ drawable ic_mtrl_chip_close_circle
 drawable ic_mypage
 drawable ic_road_search_button
 drawable ic_search
+drawable ic_settings
 drawable ic_smoking_marker
 drawable ic_star
 drawable kakao_symbol
@@ -3044,6 +3045,7 @@ id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
 id action_mypageFragment_to_settingFragment
+id action_searchFragment_to_smokersDetailFragment
 id action_text
 id actions
 id activity_chooser_view_content
@@ -3165,7 +3167,6 @@ id easeOut
 id east
 id edit_query
 id elastic
-id emailEditText
 id embed
 id end
 id endToStart
@@ -3376,7 +3377,6 @@ id parent
 id parentPanel
 id parentRelative
 id parent_matrix
-id passwordEditText
 id password_toggle
 id path
 id pathRelative
@@ -3441,14 +3441,13 @@ id shortcut
 id showCustom
 id showHome
 id showTitle
-id signInOutButton
-id signUpButton
 id sin
 id skipCollapsed
 id skipped
 id slide
 id sliding_pane_detail_container
 id sliding_pane_layout
+id smokersDetailFragment
 id snackbar_action
 id snackbar_text
 id snap
@@ -3536,7 +3535,6 @@ id tv_filter1
 id tv_place_address
 id tv_place_name
 id tv_place_search_text
-id tv_result
 id tv_smokers_label
 id tv_smokers_place_address
 id tv_smokers_place_name
@@ -3697,7 +3695,6 @@ layout abc_tooltip
 layout activity_add_smokers
 layout activity_login
 layout activity_main
-layout activity_smokers_detail
 layout activity_splash
 layout activity_talk_auth_code
 layout browser_actions_context_menu_page
@@ -3723,6 +3720,7 @@ layout fragment_home
 layout fragment_mypage
 layout fragment_setting
 layout fragment_smokers
+layout fragment_smokers_detail
 layout image_frame
 layout item_home_banner
 layout item_smokers_list
@@ -3902,6 +3900,7 @@ string fallback_menu_item_copy_link
 string fallback_menu_item_open_in_browser
 string fallback_menu_item_share_link
 string firebase_database_url
+string firebase_url
 string gcm_defaultSenderId
 string google_api_key
 string google_app_id

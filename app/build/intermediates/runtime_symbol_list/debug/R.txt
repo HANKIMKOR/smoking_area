@@ -2850,6 +2850,7 @@ int drawable ic_mtrl_chip_close_circle 0x7f0800ac
 int drawable ic_mypage 0x7f0800ad
 int drawable ic_road_search_button 0x7f0800ae
 int drawable ic_search 0x7f0800af
+int drawable ic_settings 0x7f08012c
 int drawable ic_smoking_marker 0x7f0800b0
 int drawable ic_star 0x7f0800b1
 int drawable kakao_symbol 0x7f0800b2
@@ -3043,6 +3044,7 @@ int id action_mode_bar 0x7f090041
 int id action_mode_bar_stub 0x7f090042
 int id action_mode_close_button 0x7f090043
 int id action_mypageFragment_to_settingFragment 0x7f09024d
+int id action_searchFragment_to_smokersDetailFragment 0x7f090251
 int id action_text 0x7f090044
 int id actions 0x7f090045
 int id activity_chooser_view_content 0x7f090046
@@ -3164,7 +3166,6 @@ int id easeOut 0x7f0900b9
 int id east 0x7f0900ba
 int id edit_query 0x7f0900bb
 int id elastic 0x7f0900bc
-int id emailEditText 0x7f0900bd
 int id embed 0x7f0900be
 int id end 0x7f0900bf
 int id endToStart 0x7f0900c0
@@ -3375,7 +3376,6 @@ int id parent 0x7f09018a
 int id parentPanel 0x7f09018b
 int id parentRelative 0x7f09018c
 int id parent_matrix 0x7f09018d
-int id passwordEditText 0x7f09018e
 int id password_toggle 0x7f09018f
 int id path 0x7f090190
 int id pathRelative 0x7f090191
@@ -3440,14 +3440,13 @@ int id shortcut 0x7f0901ca
 int id showCustom 0x7f0901cb
 int id showHome 0x7f0901cc
 int id showTitle 0x7f0901cd
-int id signInOutButton 0x7f0901ce
-int id signUpButton 0x7f0901cf
 int id sin 0x7f0901d0
 int id skipCollapsed 0x7f0901d1
 int id skipped 0x7f0901d2
 int id slide 0x7f0901d3
 int id sliding_pane_detail_container 0x7f0901d4
 int id sliding_pane_layout 0x7f0901d5
+int id smokersDetailFragment 0x7f090252
 int id snackbar_action 0x7f0901d6
 int id snackbar_text 0x7f0901d7
 int id snap 0x7f0901d8
@@ -3535,7 +3534,6 @@ int id tv_filter1 0x7f090229
 int id tv_place_address 0x7f09022a
 int id tv_place_name 0x7f09022b
 int id tv_place_search_text 0x7f09022c
-int id tv_result 0x7f09022d
 int id tv_smokers_label 0x7f09022e
 int id tv_smokers_place_address 0x7f09022f
 int id tv_smokers_place_name 0x7f090230
@@ -3696,7 +3694,6 @@ int layout abc_tooltip 0x7f0c001b
 int layout activity_add_smokers 0x7f0c001c
 int layout activity_login 0x7f0c001d
 int layout activity_main 0x7f0c001e
-int layout activity_smokers_detail 0x7f0c001f
 int layout activity_splash 0x7f0c0020
 int layout activity_talk_auth_code 0x7f0c0021
 int layout browser_actions_context_menu_page 0x7f0c0022
@@ -3722,6 +3719,7 @@ int layout fragment_home 0x7f0c0035
 int layout fragment_mypage 0x7f0c0036
 int layout fragment_setting 0x7f0c0037
 int layout fragment_smokers 0x7f0c0038
+int layout fragment_smokers_detail 0x7f0c009b
 int layout image_frame 0x7f0c0039
 int layout item_home_banner 0x7f0c003a
 int layout item_smokers_list 0x7f0c003b
@@ -3901,6 +3899,7 @@ int string fallback_menu_item_copy_link 0x7f130047
 int string fallback_menu_item_open_in_browser 0x7f130048
 int string fallback_menu_item_share_link 0x7f130049
 int string firebase_database_url 0x7f13004a
+int string firebase_url 0x7f1300d7
 int string gcm_defaultSenderId 0x7f13004b
 int string google_api_key 0x7f13004c
 int string google_app_id 0x7f13004d

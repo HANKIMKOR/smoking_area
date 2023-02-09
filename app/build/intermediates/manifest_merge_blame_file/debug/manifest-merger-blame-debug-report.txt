@@ -63,16 +63,16 @@
 34        <intent>
 34-->[com.kakao.sdk:v2-common:2.12.1] /Users/RATIA/.gradle/caches/transforms-3/c148fddc372d15ceeaf30a972e23a97e/transformed/jetified-v2-common-2.12.1/AndroidManifest.xml:15:9-21:18
 35            <action android:name="android.intent.action.VIEW" />
-35-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:56:17-69
-35-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:56:25-66
+35-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:57:17-69
+35-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:57:25-66
 36
 37            <category android:name="android.intent.category.BROWSABLE" />
-37-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:59:17-78
-37-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:59:27-75
+37-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:60:17-78
+37-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:60:27-75
 38
 39            <data android:scheme="https" />
-39-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:61:17-63:73
-39-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:63:21-70
+39-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:62:17-64:73
+39-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:64:21-70
 40        </intent>
 41    </queries>
 42
@@ -87,7 +87,7 @@
 45-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/RATIA/.gradle/caches/transforms-3/ebf9248a587ed447d6626d3f8108dcfa/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:26:22-107
 46
 47    <application
-47-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:10:5-66:19
+47-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:10:5-67:19
 48        android:name="com.hankim.smokingarea.InitApp"
 48-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:11:9-32
 49        android:allowBackup="false"
@@ -152,43 +152,43 @@
 82            android:exported="false" />
 82-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:44:13-37
 83        <activity
-83-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:45:9-47:40
+83-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:46:9-48:40
 84            android:name="com.hankim.smokingarea.MainActivity"
-84-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:46:13-41
+84-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:47:13-41
 85            android:exported="false" />
-85-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:47:13-37
+85-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:48:13-37
 86        <activity android:name="com.hankim.smokingarea.home.AddSmokersActivity" />
-86-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:49:9-61
-86-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:49:19-58
+86-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:50:9-61
+86-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:50:19-58
 87        <activity
-87-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:51:9-65:20
+87-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:52:9-66:20
 88            android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
-88-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:52:13-70
+88-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:53:13-70
 89            android:exported="true"
-89-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:53:13-36
+89-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:54:13-36
 90            android:launchMode="singleTask"
-90-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:54:13-44
+90-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:55:13-44
 91            android:theme="@style/TransparentCompat" >
 91-->[com.kakao.sdk:v2-auth:2.12.1] /Users/RATIA/.gradle/caches/transforms-3/ce86cc3ac07c8e0686cb0dd8ca522822/transformed/jetified-v2-auth-2.12.1/AndroidManifest.xml:19:13-53
 92            <intent-filter>
-92-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:55:13-64:29
+92-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:56:13-65:29
 93                <action android:name="android.intent.action.VIEW" />
-93-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:56:17-69
-93-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:56:25-66
+93-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:57:17-69
+93-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:57:25-66
 94
 95                <category android:name="android.intent.category.DEFAULT" />
-95-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:58:17-76
-95-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:58:27-73
+95-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:59:17-76
+95-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:59:27-73
 96                <category android:name="android.intent.category.BROWSABLE" />
-96-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:59:17-78
-96-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:59:27-75
+96-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:60:17-78
+96-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:60:27-75
 97
 98                <data
-98-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:61:17-63:73
+98-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:62:17-64:73
 99                    android:host="oauth"
-99-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:62:21-41
+99-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:63:21-41
 100                    android:scheme="@string/kakao_redirection_scheme" />
-100-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:63:21-70
+100-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:64:21-70
 101            </intent-filter>
 102        </activity>
 103        <activity
@@ -338,23 +338,23 @@
 177            <intent-filter>
 177-->[com.google.firebase:firebase-auth:21.1.0] /Users/RATIA/.gradle/caches/transforms-3/bfc4d44d5bc53db4173efb03cea67d48/transformed/jetified-firebase-auth-21.1.0/AndroidManifest.xml:33:13-43:29
 178                <action android:name="android.intent.action.VIEW" />
-178-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:56:17-69
-178-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:56:25-66
+178-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:57:17-69
+178-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:57:25-66
 179
 180                <category android:name="android.intent.category.DEFAULT" />
-180-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:58:17-76
-180-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:58:27-73
+180-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:59:17-76
+180-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:59:27-73
 181                <category android:name="android.intent.category.BROWSABLE" />
-181-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:59:17-78
-181-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:59:27-75
+181-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:60:17-78
+181-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:60:27-75
 182
 183                <data
-183-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:61:17-63:73
+183-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:62:17-64:73
 184                    android:host="firebase.auth"
-184-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:62:21-41
+184-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:63:21-41
 185                    android:path="/"
 186                    android:scheme="genericidp" />
-186-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:63:21-70
+186-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:64:21-70
 187            </intent-filter>
 188        </activity>
 189        <activity
@@ -372,23 +372,23 @@
 195            <intent-filter>
 195-->[com.google.firebase:firebase-auth:21.1.0] /Users/RATIA/.gradle/caches/transforms-3/bfc4d44d5bc53db4173efb03cea67d48/transformed/jetified-firebase-auth-21.1.0/AndroidManifest.xml:51:13-61:29
 196                <action android:name="android.intent.action.VIEW" />
-196-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:56:17-69
-196-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:56:25-66
+196-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:57:17-69
+196-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:57:25-66
 197
 198                <category android:name="android.intent.category.DEFAULT" />
-198-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:58:17-76
-198-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:58:27-73
+198-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:59:17-76
+198-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:59:27-73
 199                <category android:name="android.intent.category.BROWSABLE" />
-199-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:59:17-78
-199-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:59:27-75
+199-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:60:17-78
+199-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:60:27-75
 200
 201                <data
-201-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:61:17-63:73
+201-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:62:17-64:73
 202                    android:host="firebase.auth"
-202-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:62:21-41
+202-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:63:21-41
 203                    android:path="/"
 204                    android:scheme="recaptcha" />
-204-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:63:21-70
+204-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:64:21-70
 205            </intent-filter>
 206        </activity>
 207        <activity

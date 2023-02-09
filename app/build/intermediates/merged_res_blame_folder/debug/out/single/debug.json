@@ -16,6 +16,10 @@
         "source": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-main-60:/drawable/background_smokers.webp"
     },
     {
+        "merged": "com.hankim.smokingarea.app-merged_res-58:/navigation_main_navigation.xml.flat",
+        "source": "com.hankim.smokingarea.app-main-60:/navigation/main_navigation.xml"
+    },
+    {
         "merged": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-merged_res-58:/drawable-xxxhdpi_ic_gnb_back.png.flat",
         "source": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-pngs-53:/drawable-xxxhdpi/ic_gnb_back.png"
     },
@@ -104,8 +108,16 @@
         "source": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-main-60:/layout/activity_main.xml"
     },
     {
+        "merged": "com.hankim.smokingarea.app-merged_res-58:/layout_fragment_smokers_detail.xml.flat",
+        "source": "com.hankim.smokingarea.app-main-60:/layout/fragment_smokers_detail.xml"
+    },
+    {
         "merged": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-merged_res-58:/mipmap-xxhdpi_ic_launcher.webp.flat",
         "source": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-main-60:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-merged_res-58:/drawable_ic_settings.xml.flat",
+        "source": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-main-60:/drawable/ic_settings.xml"
     },
     {
         "merged": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-merged_res-58:/mipmap-hdpi_ic_launcher_round.webp.flat",
@@ -128,10 +140,6 @@
         "source": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-main-60:/drawable/ic_star.xml"
     },
     {
-        "merged": "com.hankim.smokingarea.app-merged_res-58:/layout_fragment_setting.xml.flat",
-        "source": "com.hankim.smokingarea.app-main-60:/layout/fragment_setting.xml"
-    },
-    {
         "merged": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-merged_res-58:/layout_recycler_list.xml.flat",
         "source": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-main-60:/layout/recycler_list.xml"
     },
@@ -144,16 +152,20 @@
         "source": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-pngs-53:/drawable-anydpi-v24/ic_launcher_foreground.xml"
     },
     {
-        "merged": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-merged_res-58:/menu_navigation_main_menu.xml.flat",
-        "source": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-main-60:/menu/navigation_main_menu.xml"
-    },
-    {
         "merged": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-merged_res-58:/layout_activity_smokers_detail.xml.flat",
         "source": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-main-60:/layout/activity_smokers_detail.xml"
     },
     {
+        "merged": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-merged_res-58:/menu_navigation_main_menu.xml.flat",
+        "source": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-main-60:/menu/navigation_main_menu.xml"
+    },
+    {
         "merged": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-merged_res-58:/drawable-anydpi-v24_ic_gnb_back.xml.flat",
         "source": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-pngs-53:/drawable-anydpi-v24/ic_gnb_back.xml"
+    },
+    {
+        "merged": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-merged_res-58:/layout_fragment_smokers_detail.xml.flat",
+        "source": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-main-60:/layout/fragment_smokers_detail.xml"
     },
     {
         "merged": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-merged_res-58:/drawable-xxhdpi_ic_gnb_back.png.flat",
@@ -162,6 +174,10 @@
     {
         "merged": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-merged_res-58:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-main-60:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.hankim.smokingarea.app-merged_res-58:/layout_fragment_smokers.xml.flat",
+        "source": "com.hankim.smokingarea.app-main-60:/layout/fragment_smokers.xml"
     },
     {
         "merged": "/Users/RATIA/.gradle/daemon/7.5/com.hankim.smokingarea.app-merged_res-58:/layout_fragment_mypage.xml.flat",

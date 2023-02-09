@@ -1,6 +1,7 @@
 package com.hankim.smokingarea.smokers
 
 
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,6 +15,8 @@ import com.hankim.smokingarea.SmokingList
 
 class SmokersListAdapter :
     ListAdapter<SmokingList, SmokersListAdapter.SmokersListViewHolder>(differ) {
+
+    private var onClickListener: OnClickListener? = null
 
     inner class SmokersListViewHolder(
         private val view: View
@@ -30,6 +33,10 @@ class SmokersListAdapter :
         }
     }
 
+    fun setOnClickListener(onClickListener: OnClickListener) {
+        this.onClickListener = onClickListener
+    }
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SmokersListViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -39,6 +46,16 @@ class SmokersListAdapter :
 
     override fun onBindViewHolder(holder: SmokersListViewHolder, position: Int) {
         holder.bind(currentList[position])
+
+        holder.itemView.setOnClickListener {
+            if(onClickListener != null) {
+                onClickListener!!.onClick(position, currentList[position])
+            }
+        }
+    }
+
+    interface OnClickListener {
+        fun  onClick(position: Int, model: SmokingList)
     }
 
 

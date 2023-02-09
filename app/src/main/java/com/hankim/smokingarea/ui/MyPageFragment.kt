@@ -1,4 +1,4 @@
-package com.hankim.smokingarea.mypage
+package com.hankim.smokingarea.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,13 +9,14 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.imageview.ShapeableImageView
 import com.hankim.smokingarea.R
 import com.hankim.smokingarea.databinding.FragmentMypageBinding
 import com.hankim.smokingarea.databinding.FragmentSettingBinding
 
 class MyPageFragment : Fragment() {
 
-    lateinit var settingButton: FloatingActionButton
+    lateinit var settingButton: ShapeableImageView
     lateinit var binding: FragmentMypageBinding
     override fun onCreateView(
         inflater: LayoutInflater,

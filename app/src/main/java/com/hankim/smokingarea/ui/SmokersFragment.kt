@@ -1,15 +1,19 @@
-package com.hankim.smokingarea.smokers
+package com.hankim.smokingarea.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.hankim.smokingarea.R
 import com.hankim.smokingarea.SearchData
+import com.hankim.smokingarea.SmokingList
 import com.hankim.smokingarea.databinding.FragmentSmokersBinding
 import com.hankim.smokingarea.network.ApiClient
+import com.hankim.smokingarea.smokers.SmokersListAdapter
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -29,11 +33,9 @@ class SmokersFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentSmokersBinding.inflate(inflater, container, false)
-        val rootView = binding
+        recyclerView = binding.recyclerView
 
-        recyclerView = rootView.recyclerView
-
-        return rootView.root
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -42,15 +44,19 @@ class SmokersFragment : Fragment() {
         binding.recyclerView.adapter = recyclerAdapter
         binding.recyclerView.layoutManager = LinearLayoutManager(this.activity)
 
+        recyclerAdapter.setOnClickListener(object : SmokersListAdapter.OnClickListener {
+            override fun onClick(position: Int, model: SmokingList) {
+                findNavController().navigate(R.id.action_searchFragment_to_smokersDetailFragment)
+            }
+        })
 
         getSmokingListFromAPI()
-        onClickEvent()
 
     }
 
     private fun getSmokingListFromAPI() {
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://smokingarea-c5d0b-default-rtdb.asia-southeast1.firebasedatabase.app")
+            .baseUrl(getString(R.string.firebase_url))
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
@@ -76,25 +82,4 @@ class SmokersFragment : Fragment() {
                 })
         }
     }
-
-    private fun onClickEvent() {
-//
-//        val intent = Intent(this.context,ReportsDetailActivity::class.java)
-//        recyclerAdapter.setItemClickListener(object : SmokersListAdapter.OnItemClickListener {
-//
-//            override fun onClick(view: View, position: Int) {
-////                if (view.parent == recyclerView) {
-////                    val intent = Intent(context, SmokersDetailActivity::class.java)
-////                    intent.putExtra("id", data[recyclerView.getChildAdapterPosition(view)].id)
-////                    startActivity(intent)
-////                } else {
-////                    Log.d("Error", "ddddddd")
-////                }
-//                Toast.makeText(view.context,
-//                    "${data[position].place}\n${data[position].address}",
-//                    Toast.LENGTH_SHORT).show()
-//            }
-//        })
-    }
-
 }

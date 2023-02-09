@@ -25,7 +25,7 @@
 
         <!--        First Viewer-->
         <activity
-            android:name=".SplashActivity"
+            android:name=".ui.SplashActivity"
             android:exported="true"
             android:theme="@style/Theme.SmokingArea.Splash">
             <intent-filter>
@@ -40,10 +40,11 @@
         </activity>
         <!--        Second Viewer-->
         <activity
-            android:name=".LoginActivity"
+            android:name=".ui.LoginActivity"
             android:exported="false" />
+
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="false" />
 
         <activity android:name=".home.AddSmokersActivity" />

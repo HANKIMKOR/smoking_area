@@ -4,8 +4,8 @@ package com.hankim.smokingarea.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.SearchView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -38,7 +38,7 @@ public final class FragmentSmokersBinding implements ViewBinding {
   public final RecyclerView recyclerView;
 
   @NonNull
-  public final SearchView searchBar;
+  public final EditText searchBar;
 
   @NonNull
   public final TextView tvFilter1;
@@ -48,8 +48,8 @@ public final class FragmentSmokersBinding implements ViewBinding {
 
   private FragmentSmokersBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView ivFilter,
       @NonNull TextView ivFilter2, @NonNull TextView ivFilter3, @NonNull ImageView ivSmokingMarker,
-      @NonNull RecyclerView recyclerView, @NonNull SearchView searchBar,
-      @NonNull TextView tvFilter1, @NonNull View vFilterBar) {
+      @NonNull RecyclerView recyclerView, @NonNull EditText searchBar, @NonNull TextView tvFilter1,
+      @NonNull View vFilterBar) {
     this.rootView = rootView;
     this.ivFilter = ivFilter;
     this.ivFilter2 = ivFilter2;
@@ -119,7 +119,7 @@ public final class FragmentSmokersBinding implements ViewBinding {
       }
 
       id = R.id.searchBar;
-      SearchView searchBar = ViewBindings.findChildViewById(rootView, id);
+      EditText searchBar = ViewBindings.findChildViewById(rootView, id);
       if (searchBar == null) {
         break missingId;
       }

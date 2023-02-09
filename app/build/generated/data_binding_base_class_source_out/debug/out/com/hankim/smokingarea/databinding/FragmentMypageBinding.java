@@ -4,16 +4,12 @@ package com.hankim.smokingarea.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.imageview.ShapeableImageView;
 import com.hankim.smokingarea.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -24,43 +20,12 @@ public final class FragmentMypageBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final FloatingActionButton btSettingMypage;
-
-  @NonNull
-  public final EditText emailEditText;
-
-  @NonNull
-  public final ImageView ivSmokingMarker;
-
-  @NonNull
-  public final Button naverLoginButton;
-
-  @NonNull
-  public final EditText passwordEditText;
-
-  @NonNull
-  public final Button signInOutButton;
-
-  @NonNull
-  public final Button signUpButton;
-
-  @NonNull
-  public final TextView tvResult;
+  public final ShapeableImageView btSettingMypage;
 
   private FragmentMypageBinding(@NonNull ConstraintLayout rootView,
-      @NonNull FloatingActionButton btSettingMypage, @NonNull EditText emailEditText,
-      @NonNull ImageView ivSmokingMarker, @NonNull Button naverLoginButton,
-      @NonNull EditText passwordEditText, @NonNull Button signInOutButton,
-      @NonNull Button signUpButton, @NonNull TextView tvResult) {
+      @NonNull ShapeableImageView btSettingMypage) {
     this.rootView = rootView;
     this.btSettingMypage = btSettingMypage;
-    this.emailEditText = emailEditText;
-    this.ivSmokingMarker = ivSmokingMarker;
-    this.naverLoginButton = naverLoginButton;
-    this.passwordEditText = passwordEditText;
-    this.signInOutButton = signInOutButton;
-    this.signUpButton = signUpButton;
-    this.tvResult = tvResult;
   }
 
   @Override
@@ -91,56 +56,12 @@ public final class FragmentMypageBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.bt_setting_mypage;
-      FloatingActionButton btSettingMypage = ViewBindings.findChildViewById(rootView, id);
+      ShapeableImageView btSettingMypage = ViewBindings.findChildViewById(rootView, id);
       if (btSettingMypage == null) {
         break missingId;
       }
 
-      id = R.id.emailEditText;
-      EditText emailEditText = ViewBindings.findChildViewById(rootView, id);
-      if (emailEditText == null) {
-        break missingId;
-      }
-
-      id = R.id.iv_smoking_marker;
-      ImageView ivSmokingMarker = ViewBindings.findChildViewById(rootView, id);
-      if (ivSmokingMarker == null) {
-        break missingId;
-      }
-
-      id = R.id.naverLoginButton;
-      Button naverLoginButton = ViewBindings.findChildViewById(rootView, id);
-      if (naverLoginButton == null) {
-        break missingId;
-      }
-
-      id = R.id.passwordEditText;
-      EditText passwordEditText = ViewBindings.findChildViewById(rootView, id);
-      if (passwordEditText == null) {
-        break missingId;
-      }
-
-      id = R.id.signInOutButton;
-      Button signInOutButton = ViewBindings.findChildViewById(rootView, id);
-      if (signInOutButton == null) {
-        break missingId;
-      }
-
-      id = R.id.signUpButton;
-      Button signUpButton = ViewBindings.findChildViewById(rootView, id);
-      if (signUpButton == null) {
-        break missingId;
-      }
-
-      id = R.id.tv_result;
-      TextView tvResult = ViewBindings.findChildViewById(rootView, id);
-      if (tvResult == null) {
-        break missingId;
-      }
-
-      return new FragmentMypageBinding((ConstraintLayout) rootView, btSettingMypage, emailEditText,
-          ivSmokingMarker, naverLoginButton, passwordEditText, signInOutButton, signUpButton,
-          tvResult);
+      return new FragmentMypageBinding((ConstraintLayout) rootView, btSettingMypage);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

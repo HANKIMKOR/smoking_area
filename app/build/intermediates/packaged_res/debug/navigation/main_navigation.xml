@@ -16,13 +16,17 @@
         android:id="@+id/searchFragment"
         android:name="com.hankim.smokingarea.smokers.SmokersFragment"
         android:label="SearchFragment"
-        tools:layout="@layout/fragment_smokers" />
+        tools:layout="@layout/fragment_smokers">
+        <action
+            android:id="@+id/action_searchFragment_to_smokersDetailFragment"
+            app:destination="@id/smokersDetailFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/mypageFragment"
         android:name="com.hankim.smokingarea.mypage.MyPageFragment"
         android:label="MypageFragment"
-        tools:layout="@layout/fragment_mypage" >
+        tools:layout="@layout/fragment_mypage">
         <action
             android:id="@+id/action_mypageFragment_to_settingFragment"
             app:destination="@id/settingFragment" />
@@ -30,6 +34,12 @@
     <fragment
         android:id="@+id/settingFragment"
         android:name="com.hankim.smokingarea.mypage.SettingFragment"
-        android:label="SettingFragment" />
+        android:label="SettingFragment"
+        tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/smokersDetailFragment"
+        android:name="com.hankim.smokingarea.smokers.SmokersDetailFragment"
+        android:label="SmokersDetailFragment"
+        tools:layout="@layout/fragment_smokers_detail" />
 
 </navigation>

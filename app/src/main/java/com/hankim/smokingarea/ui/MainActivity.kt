@@ -1,14 +1,11 @@
-package com.hankim.smokingarea
+package com.hankim.smokingarea.ui
 
-import android.Manifest
-import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.hankim.smokingarea.R
 
 class MainActivity : AppCompatActivity() {
 

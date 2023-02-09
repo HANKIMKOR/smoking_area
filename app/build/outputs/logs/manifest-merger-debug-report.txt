@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:2:1-68:12
-INJECTED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:2:1-68:12
-INJECTED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:2:1-68:12
-INJECTED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:2:1-68:12
+ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:2:1-69:12
+INJECTED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:2:1-69:12
+INJECTED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:2:1-69:12
+INJECTED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:2:1-69:12
 MERGED from [androidx.databinding:viewbinding:7.4.0] /Users/RATIA/.gradle/caches/transforms-3/4f366b19aebb4a5c9d70913d4a4447b7/transformed/jetified-viewbinding-7.4.0/AndroidManifest.xml:2:1-7:12
 MERGED from [com.kakao.sdk:v2-user:2.12.1] /Users/RATIA/.gradle/caches/transforms-3/31cae5478dcfa48eca432a8f3253d189/transformed/jetified-v2-user-2.12.1/AndroidManifest.xml:2:1-9:12
 MERGED from [com.kakao.sdk:v2-auth:2.12.1] /Users/RATIA/.gradle/caches/transforms-3/ce86cc3ac07c8e0686cb0dd8ca522822/transformed/jetified-v2-auth-2.12.1/AndroidManifest.xml:2:1-22:12
@@ -115,22 +115,22 @@ MERGED from [androidx.print:print:1.0.0] /Users/RATIA/.gradle/caches/transforms-
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/RATIA/.gradle/caches/transforms-3/2b4614eac59619362bd8a05e7e3ff734/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.getkeepsafe.relinker:relinker:1.4.4] /Users/RATIA/.gradle/caches/transforms-3/89de77b3c4626c740b67f30bea820aa1/transformed/jetified-relinker-1.4.4/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] /Users/RATIA/.gradle/caches/transforms-3/fb4687d0cc593de67bcf7629bfa4e0f0/transformed/jetified-protolite-well-known-types-18.0.0/AndroidManifest.xml:2:1-11:12
-INJECTED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:2:1-68:12
-INJECTED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:2:1-68:12
-INJECTED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:2:1-68:12
+INJECTED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:2:1-69:12
+INJECTED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:2:1-69:12
+INJECTED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:2:1-69:12
 	package
 		INJECTED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml
-		ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:2:1-68:12
+		ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:2:1-69:12
 		INJECTED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml
-		ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:2:1-68:12
+		ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:2:1-69:12
 		INJECTED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml
 	xmlns:tools
 		ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml
-		ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:2:1-68:12
+		ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:2:1-69:12
 		INJECTED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:2:11-69
@@ -169,7 +169,7 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.0] /U
 	android:name
 		ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:7:22-64
 application
-ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:10:5-66:19
+ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:10:5-67:19
 MERGED from [com.kakao.sdk:v2-auth:2.12.1] /Users/RATIA/.gradle/caches/transforms-3/ce86cc3ac07c8e0686cb0dd8ca522822/transformed/jetified-v2-auth-2.12.1/AndroidManifest.xml:9:5-20:19
 MERGED from [com.kakao.sdk:v2-auth:2.12.1] /Users/RATIA/.gradle/caches/transforms-3/ce86cc3ac07c8e0686cb0dd8ca522822/transformed/jetified-v2-auth-2.12.1/AndroidManifest.xml:9:5-20:19
 MERGED from [com.google.firebase:firebase-firestore-ktx:24.4.2] /Users/RATIA/.gradle/caches/transforms-3/0b599237fc3906fc082cfb612839a471/transformed/jetified-firebase-firestore-ktx-24.4.2/AndroidManifest.xml:10:5-18:19
@@ -311,47 +311,47 @@ ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidMa
 	android:name
 		ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:43:13-42
 activity#com.hankim.smokingarea.MainActivity
-ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:45:9-47:40
+ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:46:9-48:40
 	android:exported
-		ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:47:13-37
+		ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:48:13-37
 	android:name
-		ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:46:13-41
+		ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:47:13-41
 activity#com.hankim.smokingarea.home.AddSmokersActivity
-ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:49:9-61
+ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:50:9-61
 	android:name
-		ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:49:19-58
+		ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:50:19-58
 activity#com.kakao.sdk.auth.AuthCodeHandlerActivity
-ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:51:9-65:20
+ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:52:9-66:20
 MERGED from [com.kakao.sdk:v2-auth:2.12.1] /Users/RATIA/.gradle/caches/transforms-3/ce86cc3ac07c8e0686cb0dd8ca522822/transformed/jetified-v2-auth-2.12.1/AndroidManifest.xml:16:9-19:56
 MERGED from [com.kakao.sdk:v2-auth:2.12.1] /Users/RATIA/.gradle/caches/transforms-3/ce86cc3ac07c8e0686cb0dd8ca522822/transformed/jetified-v2-auth-2.12.1/AndroidManifest.xml:16:9-19:56
 	android:launchMode
-		ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:54:13-44
+		ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:55:13-44
 	android:exported
-		ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:53:13-36
+		ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:54:13-36
 	android:theme
 		ADDED from [com.kakao.sdk:v2-auth:2.12.1] /Users/RATIA/.gradle/caches/transforms-3/ce86cc3ac07c8e0686cb0dd8ca522822/transformed/jetified-v2-auth-2.12.1/AndroidManifest.xml:19:13-53
 	android:name
-		ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:52:13-70
+		ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:53:13-70
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:oauth+data:scheme:@string/kakao_redirection_scheme
-ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:55:13-64:29
+ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:56:13-65:29
 action#android.intent.action.VIEW
-ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:56:17-69
+ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:57:17-69
 	android:name
-		ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:56:25-66
+		ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:57:25-66
 category#android.intent.category.DEFAULT
-ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:58:17-76
+ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:59:17-76
 	android:name
-		ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:58:27-73
+		ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:59:27-73
 category#android.intent.category.BROWSABLE
-ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:59:17-78
+ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:60:17-78
 	android:name
-		ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:59:27-75
+		ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:60:27-75
 data
-ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:61:17-63:73
+ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:62:17-64:73
 	android:host
-		ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:62:21-41
+		ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:63:21-41
 	android:scheme
-		ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:63:21-70
+		ADDED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:64:21-70
 uses-sdk
 INJECTED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml
