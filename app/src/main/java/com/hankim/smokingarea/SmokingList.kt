@@ -1,7 +1,5 @@
 package com.hankim.smokingarea
 
-import android.os.Parcelable
-
 data class SmokingList(
     val id: Int,
     val place: String,

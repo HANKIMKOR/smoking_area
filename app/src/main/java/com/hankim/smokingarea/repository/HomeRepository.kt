@@ -1,4 +1,6 @@
 package com.hankim.smokingarea.repository
 
-class HomeRepository {
+import com.hankim.smokingarea.SmokingList
+
+class HomeRepository(privat val database : SmokingList) {
 }
