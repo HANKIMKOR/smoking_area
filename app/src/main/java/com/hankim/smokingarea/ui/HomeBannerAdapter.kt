@@ -1,19 +1,18 @@
 package com.hankim.smokingarea.ui
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.hankim.smokingarea.R
-import com.hankim.smokingarea.SmokingList
+import com.hankim.smokingarea.network.SmokersEntity
 import com.hankim.smokingarea.databinding.ItemHomeBannerBinding
 
 
 class HomeBannerAdapter :
-    ListAdapter<SmokingList, HomeBannerAdapter.HomeBannerViewHolder>(BannerDiffCallback()) {
+    ListAdapter<SmokersEntity, HomeBannerAdapter.HomeBannerViewHolder>(BannerDiffCallback()) {
 
     private lateinit var binding: ItemHomeBannerBinding
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeBannerViewHolder {
@@ -26,7 +25,7 @@ class HomeBannerAdapter :
     }
 
     inner class HomeBannerViewHolder(private val binding: ItemHomeBannerBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(smokingList: SmokingList) {
+        fun bind(smokingList: SmokersEntity) {
             binding.viewModel = viewModel
 
             val bannerPlaceNameTextView = view.findViewById<TextView>(R.id.tv_place_name)
@@ -39,12 +38,12 @@ class HomeBannerAdapter :
     }
 }
 
-class BannerDiffCallback : DiffUtil.ItemCallback<SmokingList>() {
-    override fun areItemsTheSame(oldItem: SmokingList, newItem: SmokingList): Boolean {
+class BannerDiffCallback : DiffUtil.ItemCallback<SmokersEntity>() {
+    override fun areItemsTheSame(oldItem: SmokersEntity, newItem: SmokersEntity): Boolean {
         return oldItem.id == newItem.id
     }
 
-    override fun areContentsTheSame(oldItem: SmokingList, newItem: SmokingList): Boolean {
+    override fun areContentsTheSame(oldItem: SmokersEntity, newItem: SmokersEntity): Boolean {
         return oldItem == newItem
     }
 }

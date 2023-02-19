@@ -9,3 +9,5 @@ class InitApp : Application() {
         KakaoSdk.init(this, getString(R.string.kakao_native_app_key))
     }
 }
+
+// for kakaomap

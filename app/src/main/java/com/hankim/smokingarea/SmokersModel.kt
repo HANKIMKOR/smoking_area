@@ -1,6 +1,9 @@
 package com.hankim.smokingarea
 
-data class SmokingList(
+import androidx.room.PrimaryKey
+import com.google.gson.annotations.SerializedName
+
+data class SmokersModel(
     val id: Int,
     val place: String,
     val local1: String,
@@ -11,5 +14,5 @@ data class SmokingList(
     val sector: String,
     val divide1: String,
     val divide2: String,
-    val update: String,
-): java.io.Serializable
+    val update: String
+)

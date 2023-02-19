@@ -9,10 +9,10 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.hankim.smokingarea.R
-import com.hankim.smokingarea.SearchData
-import com.hankim.smokingarea.SmokingList
+import com.hankim.smokingarea.network.SmokersDto
+import com.hankim.smokingarea.network.SmokersEntity
 import com.hankim.smokingarea.databinding.FragmentSmokersBinding
-import com.hankim.smokingarea.network.ApiClient
+import com.hankim.smokingarea.network.SmokersService
 import com.hankim.smokingarea.smokers.SmokersListAdapter
 import retrofit2.Call
 import retrofit2.Callback
@@ -45,7 +45,7 @@ class SmokersFragment : Fragment() {
         binding.recyclerView.layoutManager = LinearLayoutManager(this.activity)
 
         recyclerAdapter.setOnClickListener(object : SmokersListAdapter.OnClickListener {
-            override fun onClick(position: Int, model: SmokingList) {
+            override fun onClick(position: Int, model: SmokersEntity) {
                 findNavController().navigate(R.id.action_searchFragment_to_smokersDetailFragment)
             }
         })
@@ -60,12 +60,12 @@ class SmokersFragment : Fragment() {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
-        retrofit.create(ApiClient::class.java).also {
-            it.getSmokingList()
-                .enqueue(object : Callback<SearchData> {
+        retrofit.create(SmokersService::class.java).also {
+            it.getSmokersPlace()
+                .enqueue(object : Callback<SmokersDto> {
                     override fun onResponse(
-                        call: Call<SearchData>,
-                        response: Response<SearchData>
+                        call: Call<SmokersDto>,
+                        response: Response<SmokersDto>
                     ) {
                         if (response.isSuccessful.not()) {
                             return
@@ -76,7 +76,7 @@ class SmokersFragment : Fragment() {
                         }
                     }
 
-                    override fun onFailure(call: Call<SearchData>, t: Throwable) {
+                    override fun onFailure(call: Call<SmokersDto>, t: Throwable) {
                         TODO("Not yet implemented")
                     }
                 })

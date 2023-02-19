@@ -7,17 +7,20 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewmodel.viewModelFactory
 import androidx.viewpager2.widget.ViewPager2
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.hankim.smokingarea.R
-import com.hankim.smokingarea.SearchData
-import com.hankim.smokingarea.SmokingList
+import com.hankim.smokingarea.database.SmokersEntity
+import com.hankim.smokingarea.network.SmokersDto
+import com.hankim.smokingarea.network.SmokersEntity
 import com.hankim.smokingarea.databinding.FragmentHomeBinding
 import com.hankim.smokingarea.home.AddSmokersActivity
-import com.hankim.smokingarea.network.ApiClient
+import com.hankim.smokingarea.network.SmokersService
+import com.hankim.smokingarea.viewmodels.SmokersViewModel
 import com.naver.maps.geometry.LatLng
 import com.naver.maps.map.*
 import com.naver.maps.map.overlay.Marker
@@ -34,7 +37,14 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class HomeFragment : Fragment(), OnMapReadyCallback, Overlay.OnClickListener {
 
-    private val viewModel: HomeViewModel by viewModels { viewModelFactory { requireContext() }}
+    private val viewModel: SmokersViewModel by lazy {
+        val activity = requireNotNull(this.activity) {
+
+        }
+        ViewModelProvider(this, SmokersViewModel.Factory(activity.application))[SmokersViewModel::class.java]
+    }
+
+    private var viewPagerAdapter: HomeBannerAdapter()
     private lateinit var binding: FragmentHomeBinding
 
     // NaverMap
@@ -45,7 +55,6 @@ class HomeFragment : Fragment(), OnMapReadyCallback, Overlay.OnClickListener {
 
     // Viewpager2
     private lateinit var viewPager: ViewPager2
-    private var viewPagerAdapter = HomeBannerAdapter()
 
 
     //Firebase
@@ -89,8 +98,6 @@ class HomeFragment : Fragment(), OnMapReadyCallback, Overlay.OnClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.lifecycleOwner = viewLifecycleOwner
-
         // NaverMap 위치 설정
         currentLocationButton = binding.btCurrentLocation
         locationSource = FusedLocationSource(this, LOCATION_PERMISSION_REQUEST_CODE)
@@ -123,29 +130,30 @@ class HomeFragment : Fragment(), OnMapReadyCallback, Overlay.OnClickListener {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
-        retrofit.create(ApiClient::class.java).also {
-            it.getSmokingList()
-                .enqueue(object : Callback<SearchData> {
-                    override fun onResponse(
-                        call: Call<SearchData>,
-                        response: Response<SearchData>
-                    ) {
-                        if (response.isSuccessful.not()) {
-                            return
+        retrofit.create(SmokersService::class.java)
+            .also {
+                it.getSmokersPlace()
+                    .enqueue(object : Callback<SmokersDto> {
+                        override fun onResponse(
+                            call: Call<SmokersDto>,
+                            response: Response<SmokersDto>
+                        ) {
+                            if (response.isSuccessful.not()) {
+                                return
+                            }
+
+                            response.body()?.let { data ->
+                                updateMarker(data.smokingList)
+                                viewPagerAdapter.submitList(data.smokingList)
+                            }
+
                         }
 
-                        response.body()?.let { data ->
-                            updateMarker(data.smokingList)
-                            viewPagerAdapter.submitList(data.smokingList)
+                        override fun onFailure(call: Call<SmokersDto>, t: Throwable) {
+                            TODO("Not yet implemented")
                         }
-
-                    }
-
-                    override fun onFailure(call: Call<SearchData>, t: Throwable) {
-                        TODO("Not yet implemented")
-                    }
-                })
-        }
+                    })
+            }
     }
 
     private fun setOffScreenViewPager() {
@@ -161,7 +169,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback, Overlay.OnClickListener {
         }
     }
 
-    private fun updateMarker(dataLists: List<SmokingList>) {
+    private fun updateMarker(dataLists: List<SmokersEntity>) {
         dataLists.forEach { dataList ->
             val marker = Marker()
             marker.position = LatLng(dataList.lat, dataList.lng)

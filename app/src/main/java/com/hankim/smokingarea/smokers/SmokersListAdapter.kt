@@ -1,7 +1,6 @@
 package com.hankim.smokingarea.smokers
 
 
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,11 +9,11 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.hankim.smokingarea.R
-import com.hankim.smokingarea.SmokingList
+import com.hankim.smokingarea.network.SmokersEntity
 
 
 class SmokersListAdapter :
-    ListAdapter<SmokingList, SmokersListAdapter.SmokersListViewHolder>(differ) {
+    ListAdapter<SmokersEntity, SmokersListAdapter.SmokersListViewHolder>(differ) {
 
     private var onClickListener: OnClickListener? = null
 
@@ -22,7 +21,7 @@ class SmokersListAdapter :
         private val view: View
     ) : RecyclerView.ViewHolder(view) {
 
-        fun bind(smokingList: SmokingList) {
+        fun bind(smokingList: SmokersEntity) {
             val bannerPlaceNameTextView = view.findViewById<TextView>(R.id.tv_place_name)
             val bannerPlaceAddressTextView =
                 view.findViewById<TextView>(R.id.tv_place_address)
@@ -55,19 +54,19 @@ class SmokersListAdapter :
     }
 
     interface OnClickListener {
-        fun  onClick(position: Int, model: SmokingList)
+        fun  onClick(position: Int, model: SmokersEntity)
     }
 
 
     companion object {
-        val differ = object : DiffUtil.ItemCallback<SmokingList>() {
-            override fun areItemsTheSame(oldItem: SmokingList, newItem: SmokingList): Boolean {
+        val differ = object : DiffUtil.ItemCallback<SmokersEntity>() {
+            override fun areItemsTheSame(oldItem: SmokersEntity, newItem: SmokersEntity): Boolean {
                 return oldItem.id == newItem.id
             }
 
             override fun areContentsTheSame(
-                oldItem: SmokingList,
-                newItem: SmokingList
+                oldItem: SmokersEntity,
+                newItem: SmokersEntity
             ): Boolean {
                 return oldItem == newItem
             }
