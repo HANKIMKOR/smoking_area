@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.hankim.smokingarea.app-mergeDebugResources-56:/values-ky/values-ky.xml",
+            "outputFile": "com.hankim.smokingarea.app-mergeDebugResources-59:/values-ky/values-ky.xml",
             "map": [
                 {
                     "source": "/Users/RATIA/.gradle/caches/transforms-3/93e1fb5f137fee7314f18b97c47c6d88/transformed/jetified-play-services-base-18.0.1/res/values-ky/values.xml",

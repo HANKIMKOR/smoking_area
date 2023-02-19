@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.hankim.smokingarea.app-mergeDebugResources-56:/values-v26/values-v26.xml",
+            "outputFile": "com.hankim.smokingarea.app-mergeDebugResources-59:/values-v26/values-v26.xml",
             "map": [
                 {
                     "source": "/Users/RATIA/.gradle/caches/transforms-3/949e326c0185da1ad3f7b7c06684a314/transformed/appcompat-1.5.1/res/values-v26/values-v26.xml",

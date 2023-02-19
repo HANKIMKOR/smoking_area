@@ -8,13 +8,13 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.hankim.smokingarea.home.HomeFragment"
+        android:name="com.hankim.smokingarea.ui.HomeFragment"
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/searchFragment"
-        android:name="com.hankim.smokingarea.smokers.SmokersFragment"
+        android:name="com.hankim.smokingarea.ui.SmokersFragment"
         android:label="SearchFragment"
         tools:layout="@layout/fragment_smokers">
         <action
@@ -24,7 +24,7 @@
 
     <fragment
         android:id="@+id/mypageFragment"
-        android:name="com.hankim.smokingarea.mypage.MyPageFragment"
+        android:name="com.hankim.smokingarea.ui.MyPageFragment"
         android:label="MypageFragment"
         tools:layout="@layout/fragment_mypage">
         <action

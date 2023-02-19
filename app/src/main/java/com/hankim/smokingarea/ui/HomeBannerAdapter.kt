@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.hankim.smokingarea.R
-import com.hankim.smokingarea.network.SmokersEntity
+import com.hankim.smokingarea.database.SmokersEntity
 import com.hankim.smokingarea.databinding.ItemHomeBannerBinding
 
 
@@ -26,11 +26,10 @@ class HomeBannerAdapter :
 
     inner class HomeBannerViewHolder(private val binding: ItemHomeBannerBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(smokingList: SmokersEntity) {
-            binding.viewModel = viewModel
 
-            val bannerPlaceNameTextView = view.findViewById<TextView>(R.id.tv_place_name)
+            val bannerPlaceNameTextView = binding.tvPlaceName
             val bannerPlaceAddressTextView =
-                view.findViewById<TextView>(R.id.tv_place_address)
+                binding.tvPlaceAddress
 
             bannerPlaceNameTextView.text = smokingList.place
             bannerPlaceAddressTextView.text = smokingList.address

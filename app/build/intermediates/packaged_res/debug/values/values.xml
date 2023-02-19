@@ -56,7 +56,7 @@
     <style name="AppbarStyle" parent="Widget.Design.AppBarLayout">
         <item name="android:background">@color/white</item>
     </style>
-    <style name="Theme.SmokingArea" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.SmokingArea" parent="Theme.MaterialComponents.NoActionBar">
         
         <item name="colorPrimary">@color/background_blue</item>
         <item name="colorPrimaryVariant">@color/background_blue</item>

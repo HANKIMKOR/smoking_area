@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.hankim.smokingarea.app-mergeDebugResources-56:/values-en-rAU/values-en-rAU.xml",
+            "outputFile": "com.hankim.smokingarea.app-mergeDebugResources-59:/values-en-rAU/values-en-rAU.xml",
             "map": [
                 {
                     "source": "/Users/RATIA/.gradle/caches/transforms-3/54a1df6e057ccc98cf70868587de2dcd/transformed/browser-1.4.0/res/values-en-rAU/values-en-rAU.xml",

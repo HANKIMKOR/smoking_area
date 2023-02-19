@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.hankim.smokingarea.R
-import com.hankim.smokingarea.network.SmokersEntity
+import com.hankim.smokingarea.database.SmokersEntity
 
 
 class SmokersListAdapter :

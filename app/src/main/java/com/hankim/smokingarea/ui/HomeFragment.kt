@@ -16,7 +16,6 @@ import com.google.firebase.ktx.Firebase
 import com.hankim.smokingarea.R
 import com.hankim.smokingarea.database.SmokersEntity
 import com.hankim.smokingarea.network.SmokersDto
-import com.hankim.smokingarea.network.SmokersEntity
 import com.hankim.smokingarea.databinding.FragmentHomeBinding
 import com.hankim.smokingarea.home.AddSmokersActivity
 import com.hankim.smokingarea.network.SmokersService
@@ -44,7 +43,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback, Overlay.OnClickListener {
         ViewModelProvider(this, SmokersViewModel.Factory(activity.application))[SmokersViewModel::class.java]
     }
 
-    private var viewPagerAdapter: HomeBannerAdapter()
+    private lateinit var viewPagerAdapter: HomeBannerAdapter
     private lateinit var binding: FragmentHomeBinding
 
     // NaverMap

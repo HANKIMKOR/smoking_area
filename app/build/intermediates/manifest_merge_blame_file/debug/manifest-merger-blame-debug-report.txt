@@ -120,8 +120,8 @@
 64        <!-- First Viewer -->
 65        <activity
 65-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:27:9-40:20
-66            android:name="com.hankim.smokingarea.SplashActivity"
-66-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:28:13-43
+66            android:name="com.hankim.smokingarea.ui.SplashActivity"
+66-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:28:13-46
 67            android:exported="true"
 67-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:29:13-36
 68            android:theme="@style/Theme.SmokingArea.Splash" >
@@ -147,14 +147,14 @@
 79        <!-- Second Viewer -->
 80        <activity
 80-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:42:9-44:40
-81            android:name="com.hankim.smokingarea.LoginActivity"
-81-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:43:13-42
+81            android:name="com.hankim.smokingarea.ui.LoginActivity"
+81-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:43:13-45
 82            android:exported="false" />
 82-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:44:13-37
 83        <activity
 83-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:46:9-48:40
-84            android:name="com.hankim.smokingarea.MainActivity"
-84-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:47:13-41
+84            android:name="com.hankim.smokingarea.ui.MainActivity"
+84-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:47:13-44
 85            android:exported="false" />
 85-->/Users/RATIA/AndroidStudioProjects/SmokingArea/app/src/main/AndroidManifest.xml:48:13-37
 86        <activity android:name="com.hankim.smokingarea.home.AddSmokersActivity" />
@@ -462,27 +462,36 @@
 244            android:required="false" />
 244-->[androidx.window:window:1.0.0] /Users/RATIA/.gradle/caches/transforms-3/07c89e31e57fa8bbd42ca56cc9ad55f1/transformed/jetified-window-1.0.0/AndroidManifest.xml:30:13-37
 245
-246        <provider
-246-->[androidx.emoji2:emoji2:1.2.0] /Users/RATIA/.gradle/caches/transforms-3/9b231d506e2407853cf9217f703ef7de/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
-247            android:name="androidx.startup.InitializationProvider"
-247-->[androidx.emoji2:emoji2:1.2.0] /Users/RATIA/.gradle/caches/transforms-3/9b231d506e2407853cf9217f703ef7de/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
-248            android:authorities="com.hankim.smokingarea.androidx-startup"
-248-->[androidx.emoji2:emoji2:1.2.0] /Users/RATIA/.gradle/caches/transforms-3/9b231d506e2407853cf9217f703ef7de/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
-249            android:exported="false" >
-249-->[androidx.emoji2:emoji2:1.2.0] /Users/RATIA/.gradle/caches/transforms-3/9b231d506e2407853cf9217f703ef7de/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
-250            <meta-data
-250-->[androidx.emoji2:emoji2:1.2.0] /Users/RATIA/.gradle/caches/transforms-3/9b231d506e2407853cf9217f703ef7de/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
-251                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-251-->[androidx.emoji2:emoji2:1.2.0] /Users/RATIA/.gradle/caches/transforms-3/9b231d506e2407853cf9217f703ef7de/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
-252                android:value="androidx.startup" />
-252-->[androidx.emoji2:emoji2:1.2.0] /Users/RATIA/.gradle/caches/transforms-3/9b231d506e2407853cf9217f703ef7de/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
-253            <meta-data
-253-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/RATIA/.gradle/caches/transforms-3/a8f4d28b6f327c3cb19986be516a54cc/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
-254                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-254-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/RATIA/.gradle/caches/transforms-3/a8f4d28b6f327c3cb19986be516a54cc/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
-255                android:value="androidx.startup" />
-255-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/RATIA/.gradle/caches/transforms-3/a8f4d28b6f327c3cb19986be516a54cc/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
-256        </provider>
-257    </application>
-258
-259</manifest>
+246        <service
+246-->[androidx.room:room-runtime:2.4.0] /Users/RATIA/.gradle/caches/transforms-3/be84fcffc7abbed7c52b4423081b3e3b/transformed/room-runtime-2.4.0/AndroidManifest.xml:25:9-28:40
+247            android:name="androidx.room.MultiInstanceInvalidationService"
+247-->[androidx.room:room-runtime:2.4.0] /Users/RATIA/.gradle/caches/transforms-3/be84fcffc7abbed7c52b4423081b3e3b/transformed/room-runtime-2.4.0/AndroidManifest.xml:26:13-74
+248            android:directBootAware="true"
+248-->[androidx.room:room-runtime:2.4.0] /Users/RATIA/.gradle/caches/transforms-3/be84fcffc7abbed7c52b4423081b3e3b/transformed/room-runtime-2.4.0/AndroidManifest.xml:27:13-43
+249            android:exported="false" />
+249-->[androidx.room:room-runtime:2.4.0] /Users/RATIA/.gradle/caches/transforms-3/be84fcffc7abbed7c52b4423081b3e3b/transformed/room-runtime-2.4.0/AndroidManifest.xml:28:13-37
+250
+251        <provider
+251-->[androidx.emoji2:emoji2:1.2.0] /Users/RATIA/.gradle/caches/transforms-3/9b231d506e2407853cf9217f703ef7de/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+252            android:name="androidx.startup.InitializationProvider"
+252-->[androidx.emoji2:emoji2:1.2.0] /Users/RATIA/.gradle/caches/transforms-3/9b231d506e2407853cf9217f703ef7de/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+253            android:authorities="com.hankim.smokingarea.androidx-startup"
+253-->[androidx.emoji2:emoji2:1.2.0] /Users/RATIA/.gradle/caches/transforms-3/9b231d506e2407853cf9217f703ef7de/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+254            android:exported="false" >
+254-->[androidx.emoji2:emoji2:1.2.0] /Users/RATIA/.gradle/caches/transforms-3/9b231d506e2407853cf9217f703ef7de/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+255            <meta-data
+255-->[androidx.emoji2:emoji2:1.2.0] /Users/RATIA/.gradle/caches/transforms-3/9b231d506e2407853cf9217f703ef7de/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+256                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+256-->[androidx.emoji2:emoji2:1.2.0] /Users/RATIA/.gradle/caches/transforms-3/9b231d506e2407853cf9217f703ef7de/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+257                android:value="androidx.startup" />
+257-->[androidx.emoji2:emoji2:1.2.0] /Users/RATIA/.gradle/caches/transforms-3/9b231d506e2407853cf9217f703ef7de/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+258            <meta-data
+258-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/RATIA/.gradle/caches/transforms-3/a8f4d28b6f327c3cb19986be516a54cc/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+259                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+259-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/RATIA/.gradle/caches/transforms-3/a8f4d28b6f327c3cb19986be516a54cc/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+260                android:value="androidx.startup" />
+260-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/RATIA/.gradle/caches/transforms-3/a8f4d28b6f327c3cb19986be516a54cc/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+261        </provider>
+262    </application>
+263
+264</manifest>

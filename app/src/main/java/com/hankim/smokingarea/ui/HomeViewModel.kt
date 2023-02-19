@@ -3,7 +3,7 @@ package com.hankim.smokingarea.ui
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.hankim.smokingarea.network.SmokersEntity
+import com.hankim.smokingarea.database.SmokersEntity
 
 class HomeViewModel: ViewModel() {
 

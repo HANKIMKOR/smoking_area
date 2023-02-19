@@ -2,8 +2,13 @@ package com.hankim.smokingarea.network
 
 import com.hankim.smokingarea.SmokersModel
 import com.hankim.smokingarea.database.SmokersEntity
+import retrofit2.Callback
 
-data class NetworkSmokersContainer(val smokers: List<NetworkSmokers>)
+data class NetworkSmokersContainer(val smokers: List<NetworkSmokers>) {
+    fun enqueue(callback: Callback<SmokersDto>) {
+
+    }
+}
 
 data class NetworkSmokers(
     val id: Int,

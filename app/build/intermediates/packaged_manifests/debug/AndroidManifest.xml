@@ -63,7 +63,7 @@
 
         <!-- First Viewer -->
         <activity
-            android:name="com.hankim.smokingarea.SplashActivity"
+            android:name="com.hankim.smokingarea.ui.SplashActivity"
             android:exported="true"
             android:theme="@style/Theme.SmokingArea.Splash" >
             <intent-filter>
@@ -78,10 +78,10 @@
         </activity>
         <!-- Second Viewer -->
         <activity
-            android:name="com.hankim.smokingarea.LoginActivity"
+            android:name="com.hankim.smokingarea.ui.LoginActivity"
             android:exported="false" />
         <activity
-            android:name="com.hankim.smokingarea.MainActivity"
+            android:name="com.hankim.smokingarea.ui.MainActivity"
             android:exported="false" />
         <activity android:name="com.hankim.smokingarea.home.AddSmokersActivity" />
         <activity
@@ -242,6 +242,11 @@
         <uses-library
             android:name="androidx.window.sidecar"
             android:required="false" />
+
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:directBootAware="true"
+            android:exported="false" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"

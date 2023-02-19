@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.hankim.smokingarea.R
 import com.hankim.smokingarea.network.SmokersDto
-import com.hankim.smokingarea.network.SmokersEntity
+import com.hankim.smokingarea.database.SmokersEntity
 import com.hankim.smokingarea.databinding.FragmentSmokersBinding
 import com.hankim.smokingarea.network.SmokersService
 import com.hankim.smokingarea.smokers.SmokersListAdapter
