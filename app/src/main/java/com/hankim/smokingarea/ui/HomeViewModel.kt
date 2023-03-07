@@ -10,6 +10,7 @@ class HomeViewModel: ViewModel() {
     private val _smokingList = MutableLiveData<SmokersEntity>()
     val smokingList: LiveData<SmokersEntity> = _smokingList
 
+
     fun loadHomeData() {
         // TODO Data Layer - Repository에 요청
     }

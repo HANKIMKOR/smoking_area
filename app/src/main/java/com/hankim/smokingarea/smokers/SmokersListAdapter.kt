@@ -15,6 +15,7 @@ import com.hankim.smokingarea.database.SmokersEntity
 class SmokersListAdapter :
     ListAdapter<SmokersEntity, SmokersListAdapter.SmokersListViewHolder>(differ) {
 
+
     private var onClickListener: OnClickListener? = null
 
     inner class SmokersListViewHolder(
