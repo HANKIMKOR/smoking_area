@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="reply_entries">
+        <item>Reply</item>
+        <item>Reply to all</item>
+    </string-array>
+    <string-array name="reply_values">
+        <item>reply</item>
+        <item>reply_all</item>
+    </string-array>
+    <color name="background_blue">#313381</color>
+    <color name="background_gray">#FCFCFC</color>
+    <color name="background_gray_bold">#7E7E7E</color>
+    <color name="black">#FF000000</color>
+    <color name="kakao_container">#FEE500</color>
+    <color name="kakao_label">#191919</color>
+    <color name="kakao_symbol">#000000</color>
+    <color name="naver_container">#03C75A</color>
+    <color name="orange">#F27F35</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#FFFFFFFF</color>
+    <dimen name="viewpager_item_margin">16dp</dimen>
+    <dimen name="viewpager_item_width">312dp</dimen>
+    <string name="app_name">SmokingArea</string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="default_web_client_id" translatable="false">721055270947-3p9jigbi89lu9u1qvvoihvga2cj4l14d.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://smokingarea-c5d0b-default-rtdb.asia-southeast1.firebasedatabase.app</string>
+    <string name="firebase_url">"https://smokingarea-c5d0b-default-rtdb.asia-southeast1.firebasedatabase.app"</string>
+    <string name="gcm_defaultSenderId" translatable="false">721055270947</string>
+    <string name="google_api_key" translatable="false">AIzaSyCG3ZecPWKM7KDJuhEGJBwodNiOkeWTwVI</string>
+    <string name="google_app_id" translatable="false">1:721055270947:android:6581071ce5bfce6ad7c996</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCG3ZecPWKM7KDJuhEGJBwodNiOkeWTwVI</string>
+    <string name="google_storage_bucket" translatable="false">smokingarea-c5d0b.appspot.com</string>
+    <string name="home">홈</string>
+    <string name="kakao_native_app_key">e7d122e5e15918133435b46720d654e2</string>
+    <string name="kakao_redirection_scheme">kakaoe7d122e5e15918133435b46720d654e2</string>
+    <string name="messages_header">Messages</string>
+    <string name="mypage">내 정보</string>
+    <string name="naver_login_client_id">ohRvOWUxkt1EqD2d2V0I</string>
+    <string name="naver_login_client_name">3LxQBBNxBk</string>
+    <string name="naver_login_client_secret">3LxQBBNxBk</string>
+    <string name="naver_maps_client_id">sy28c8twaz</string>
+    <string name="project_id" translatable="false">smokingarea-c5d0b</string>
+    <string name="reply_title">Default reply action</string>
+    <string name="signature_title">Your signature</string>
+    <string name="smokers">장소 찾기</string>
+    <string name="sync_header">Sync</string>
+    <string name="sync_title">Sync email periodically</string>
+    <style name="AppbarStyle" parent="Widget.Design.AppBarLayout">
+        <item name="android:background">@color/white</item>
+    </style>
+    <style name="Theme.SmokingArea" parent="Theme.MaterialComponents.NoActionBar">
+        
+        <item name="colorPrimary">@color/background_blue</item>
+        <item name="colorPrimaryVariant">@color/background_blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        
+    </style>
+    <style name="Theme.SmokingArea.Splash" parent="Theme.SmokingArea">
+        
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+</resources>
