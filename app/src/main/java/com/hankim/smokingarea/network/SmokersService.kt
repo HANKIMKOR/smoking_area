@@ -8,7 +8,6 @@ import retrofit2.http.GET
 interface SmokersService {
     @GET("https://smokingarea-c5d0b-default-rtdb.asia-southeast1.firebasedatabase.app")
     fun getSmokersPlace(): NetworkSmokersContainer
-
 }
 
 object SmokersNetwork {
@@ -19,5 +18,4 @@ object SmokersNetwork {
         .build()
 
     val smokers = retrofit.create(SmokersService::class.java)
-
 }

@@ -6,7 +6,6 @@ import retrofit2.Callback
 
 data class NetworkSmokersContainer(val smokers: List<NetworkSmokers>) {
     fun enqueue(callback: Callback<SmokersDto>) {
-
     }
 }
 

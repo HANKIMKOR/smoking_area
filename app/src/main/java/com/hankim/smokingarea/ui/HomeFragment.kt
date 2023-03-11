@@ -46,14 +46,17 @@ class HomeFragment : Fragment(), OnMapReadyCallback, Overlay.OnClickListener {
     private lateinit var viewPagerAdapter: HomeBannerAdapter
     private lateinit var binding: FragmentHomeBinding
 
+
     // NaverMap
     private lateinit var mapView: MapView
     private lateinit var naverMap: NaverMap
     private lateinit var locationSource: FusedLocationSource
     private lateinit var currentLocationButton: LocationButtonView
 
+
     // Viewpager2
     private lateinit var viewPager: ViewPager2
+
 
 
     //Firebase
