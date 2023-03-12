@@ -18,7 +18,6 @@ data class SmokersEntity(
     @SerializedName("divide2") val divide2: String,
     @SerializedName("update") val update: String,
 )
-
 fun List<SmokersEntity>.asDomainModel(): List<SmokersModel> {
     return map {
         SmokersModel(

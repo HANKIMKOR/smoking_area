@@ -10,4 +10,5 @@ class InitApp : Application() {
     }
 }
 
+
 // for kakaomap

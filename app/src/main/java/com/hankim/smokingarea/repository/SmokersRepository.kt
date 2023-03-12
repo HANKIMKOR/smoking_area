@@ -18,7 +18,6 @@ class SmokersRepository(private val database: SmokersDatabase) {
         Transformations.map(database.smokersDao.getSmokers()) {
             it.asDomainModel()
         }
-
     suspend fun refreshSmokers() {
         withContext(Dispatchers.IO) {
             val smokersList = SmokersNetwork.smokers.getSmokersPlace()

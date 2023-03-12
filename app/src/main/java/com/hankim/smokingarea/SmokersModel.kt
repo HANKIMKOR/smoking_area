@@ -15,4 +15,5 @@ data class SmokersModel(
     val divide1: String,
     val divide2: String,
     val update: String
+
 )

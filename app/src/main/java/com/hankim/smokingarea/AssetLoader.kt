@@ -9,7 +9,6 @@ class AssetLoader {
             loadAsset(context, fileName)
         }.getOrNull()
     }
-
     private fun loadAsset(context: Context, fileName: String): String {
         //json 사용부분
         return context.assets.open(fileName).use { inputStream ->
