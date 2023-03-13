@@ -23,7 +23,6 @@ data class NetworkSmokers(
     val update: String
 )
 
-
 fun NetworkSmokersContainer.asDomainModel(): List<SmokersModel> {
     return smokers.map {
         SmokersModel(
